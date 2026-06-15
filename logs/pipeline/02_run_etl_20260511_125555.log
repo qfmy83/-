@@ -1,0 +1,275 @@
+[LOG] 本次日志: /home/cty1576/bigdatacty/logs/pipeline/02_run_etl_20260511_125555.log
+============================================================
+  步骤 2: 运行 ETL 全流程
+============================================================
+
+[1/4] 初始化 Hive 数据库...
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Hive Session ID = 1a822c6f-9edc-499a-a2c5-bfbece51bf35
+
+Logging initialized using configuration in jar:file:/opt/apache-hive-3.1.3-bin/lib/hive-common-3.1.3.jar!/hive-log4j2.properties Async: true
+Hive Session ID = 028ad1a2-438e-4531-9770-9164a266d8ca
+OK
+Time taken: 0.582 seconds
+OK
+Time taken: 0.022 seconds
+OK
+Time taken: 0.019 seconds
+OK
+Time taken: 0.025 seconds
+OK
+ads
+default
+dwd
+dws
+ods
+Time taken: 0.167 seconds, Fetched: 5 row(s)
+  ✓ Hive 数据库已就绪
+
+[2/4] ETL Step 1: 加载数据到 ODS 层...
+26/05/11 12:56:03 WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 10.14.12.130 instead (on interface ens33)
+26/05/11 12:56:03 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/05/11 12:56:05 INFO SparkContext: Running Spark version 3.5.0
+26/05/11 12:56:05 INFO SparkContext: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 12:56:05 INFO SparkContext: Java version 11.0.30
+26/05/11 12:56:05 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/05/11 12:56:05 INFO ResourceUtils: ==============================================================
+26/05/11 12:56:05 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/05/11 12:56:05 INFO ResourceUtils: ==============================================================
+26/05/11 12:56:05 INFO SparkContext: Submitted application: ETL_01_LoadToODS
+26/05/11 12:56:05 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/05/11 12:56:05 INFO ResourceProfile: Limiting resource is cpu
+26/05/11 12:56:05 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/05/11 12:56:05 INFO SecurityManager: Changing view acls to: cty1576
+26/05/11 12:56:05 INFO SecurityManager: Changing modify acls to: cty1576
+26/05/11 12:56:05 INFO SecurityManager: Changing view acls groups to: 
+26/05/11 12:56:05 INFO SecurityManager: Changing modify acls groups to: 
+26/05/11 12:56:05 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: cty1576; groups with view permissions: EMPTY; users with modify permissions: cty1576; groups with modify permissions: EMPTY
+26/05/11 12:56:05 INFO Utils: Successfully started service 'sparkDriver' on port 46071.
+26/05/11 12:56:05 INFO SparkEnv: Registering MapOutputTracker
+26/05/11 12:56:05 INFO SparkEnv: Registering BlockManagerMaster
+26/05/11 12:56:05 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/05/11 12:56:05 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/05/11 12:56:05 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/05/11 12:56:05 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-630840e4-5a2c-4949-9b31-ddd0b81e2c63
+26/05/11 12:56:05 INFO MemoryStore: MemoryStore started with capacity 2.2 GiB
+26/05/11 12:56:05 INFO SparkEnv: Registering OutputCommitCoordinator
+26/05/11 12:56:06 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/05/11 12:56:06 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/05/11 12:56:06 INFO Executor: Starting executor ID driver on host 10.14.12.130
+26/05/11 12:56:06 INFO Executor: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 12:56:06 INFO Executor: Java version 11.0.30
+26/05/11 12:56:06 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/05/11 12:56:06 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@394a3747 for default.
+26/05/11 12:56:06 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33499.
+26/05/11 12:56:06 INFO NettyBlockTransferService: Server created on 10.14.12.130:33499
+26/05/11 12:56:06 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/05/11 12:56:06 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.14.12.130, 33499, None)
+26/05/11 12:56:06 INFO BlockManagerMasterEndpoint: Registering block manager 10.14.12.130:33499 with 2.2 GiB RAM, BlockManagerId(driver, 10.14.12.130, 33499, None)
+26/05/11 12:56:06 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.14.12.130, 33499, None)
+26/05/11 12:56:06 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.14.12.130, 33499, None)
+============================================================
+ETL 步骤 1: 加载原始数据到 ODS 层
+============================================================
+[INFO] 正在从 /data/raw/UserBehavior.csv 读取数据...
+[INFO] 读取到 30,000,000 条记录
+26/05/11 12:56:16 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+[INFO] 正在写入 Hive ODS 层（Parquet 格式，由 Hive Metastore 管理）...
+26/05/11 12:56:44 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+[INFO] ODS 层验证: 30,000,000 条记录
+
+[INFO] 数据样本（前5行）:
++-------+-------+-----------+--------+----------+
+|user_id|item_id|category_id|behavior|timestamp |
++-------+-------+-----------+--------+----------+
+|581436 |4615038|4756105    |fav     |1511922538|
+|581436 |1170078|4756105    |pv      |1511922556|
+|581436 |4615038|4756105    |cart    |1511929140|
+|581436 |1170078|4756105    |pv      |1511929549|
+|581436 |1297665|1530704    |pv      |1511929561|
++-------+-------+-----------+--------+----------+
+
+
+[INFO] 行为类型分布:
+26/05/11 12:56:47 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 12:56:47 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 12:56:47 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 12:56:48 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 12:56:48 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 12:56:48 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 12:56:48 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
++--------+--------+-----+
+|behavior|     cnt|  pct|
++--------+--------+-----+
+|      pv|26861407|89.54|
+|    cart| 1666880| 5.56|
+|     fav|  870851| 2.90|
+|     buy|  600862| 2.00|
++--------+--------+-----+
+
+[SUCCESS] ETL 步骤 1 完成！ODS 层数据已就绪。
+
+[3/4] ETL Step 2: ODS → DWD 数据清洗...
+26/05/11 12:56:51 WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 10.14.12.130 instead (on interface ens33)
+26/05/11 12:56:51 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/05/11 12:56:52 INFO SparkContext: Running Spark version 3.5.0
+26/05/11 12:56:52 INFO SparkContext: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 12:56:52 INFO SparkContext: Java version 11.0.30
+26/05/11 12:56:52 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/05/11 12:56:52 INFO ResourceUtils: ==============================================================
+26/05/11 12:56:52 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/05/11 12:56:52 INFO ResourceUtils: ==============================================================
+26/05/11 12:56:52 INFO SparkContext: Submitted application: ETL_02_ODS_to_DWD
+26/05/11 12:56:52 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/05/11 12:56:52 INFO ResourceProfile: Limiting resource is cpu
+26/05/11 12:56:52 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/05/11 12:56:52 INFO SecurityManager: Changing view acls to: cty1576
+26/05/11 12:56:52 INFO SecurityManager: Changing modify acls to: cty1576
+26/05/11 12:56:52 INFO SecurityManager: Changing view acls groups to: 
+26/05/11 12:56:52 INFO SecurityManager: Changing modify acls groups to: 
+26/05/11 12:56:52 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: cty1576; groups with view permissions: EMPTY; users with modify permissions: cty1576; groups with modify permissions: EMPTY
+26/05/11 12:56:52 INFO Utils: Successfully started service 'sparkDriver' on port 44763.
+26/05/11 12:56:52 INFO SparkEnv: Registering MapOutputTracker
+26/05/11 12:56:52 INFO SparkEnv: Registering BlockManagerMaster
+26/05/11 12:56:52 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/05/11 12:56:52 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/05/11 12:56:52 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/05/11 12:56:52 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-d66a090d-e972-4046-a3fe-3d68baa19e49
+26/05/11 12:56:52 INFO MemoryStore: MemoryStore started with capacity 2.2 GiB
+26/05/11 12:56:52 INFO SparkEnv: Registering OutputCommitCoordinator
+26/05/11 12:56:53 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/05/11 12:56:53 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/05/11 12:56:53 INFO Executor: Starting executor ID driver on host 10.14.12.130
+26/05/11 12:56:53 INFO Executor: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 12:56:53 INFO Executor: Java version 11.0.30
+26/05/11 12:56:53 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/05/11 12:56:53 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@67bf20a7 for default.
+26/05/11 12:56:53 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38373.
+26/05/11 12:56:53 INFO NettyBlockTransferService: Server created on 10.14.12.130:38373
+26/05/11 12:56:53 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/05/11 12:56:53 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.14.12.130, 38373, None)
+26/05/11 12:56:53 INFO BlockManagerMasterEndpoint: Registering block manager 10.14.12.130:38373 with 2.2 GiB RAM, BlockManagerId(driver, 10.14.12.130, 38373, None)
+26/05/11 12:56:53 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.14.12.130, 38373, None)
+26/05/11 12:56:53 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.14.12.130, 38373, None)
+============================================================
+ETL 步骤 2: ODS → DWD 数据清洗与维度增强
+============================================================
+26/05/11 12:56:54 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+[INFO] ODS 原始记录数: 30,000,000
+[INFO] 删除空值: 0 条
+[INFO] 删除非法行为类型: 0 条
+[INFO] 删除超出时间范围的记录: 16,307 条
+[INFO] 删除重复记录: 11 条
+[INFO] 正在写入 DWD 层（按日期分区，Parquet+Snappy）...
+26/05/11 13:00:27 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+
+============================================================
+数据质量报告
+============================================================
+  原始记录数:              30,000,000
+  空值删除:                         0
+  非法行为删除:                     0
+  超时间范围删除:              16,307
+  重复记录删除:                    11
+  最终入库记录数:          29,983,682
+  入库率:                      99.95%
+============================================================
+
+[INFO] 各日期分区数据量:
++----------+-------+
+|event_date|cnt    |
++----------+-------+
+|2017-11-25|3103053|
+|2017-11-26|3181512|
+|2017-11-27|3020562|
+|2017-11-28|2963246|
+|2017-11-29|3073740|
+|2017-11-30|3130513|
+|2017-12-01|3260093|
+|2017-12-02|4146293|
+|2017-12-03|4104670|
++----------+-------+
+
+[INFO] DWD 数据样本:
++-------+-------+-----------+--------+-------------------+----------+-----------+----------+----------+
+|user_id|item_id|category_id|behavior|event_time         |event_hour|day_of_week|is_weekend|event_date|
++-------+-------+-----------+--------+-------------------+----------+-----------+----------+----------+
+|3      |222492 |2907809    |pv      |2017-12-02 18:39:27|18        |7          |1         |2017-12-02|
+|4      |4002386|3002561    |pv      |2017-12-02 18:32:29|18        |7          |1         |2017-12-02|
+|21     |3988990|2194744    |pv      |2017-12-02 17:29:01|17        |7          |1         |2017-12-02|
+|30     |946498 |4801426    |pv      |2017-12-02 20:08:27|20        |7          |1         |2017-12-02|
+|30     |3864293|2920476    |pv      |2017-12-02 20:30:56|20        |7          |1         |2017-12-02|
++-------+-------+-----------+--------+-------------------+----------+-----------+----------+----------+
+
+[SUCCESS] ETL 步骤 2 完成！DWD 层数据已就绪。
+
+[4/4] ETL Step 3: DWD → DWS 多维聚合...
+26/05/11 13:00:40 WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 10.14.12.130 instead (on interface ens33)
+26/05/11 13:00:40 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/05/11 13:00:41 INFO SparkContext: Running Spark version 3.5.0
+26/05/11 13:00:41 INFO SparkContext: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:00:41 INFO SparkContext: Java version 11.0.30
+26/05/11 13:00:41 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/05/11 13:00:42 INFO ResourceUtils: ==============================================================
+26/05/11 13:00:42 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/05/11 13:00:42 INFO ResourceUtils: ==============================================================
+26/05/11 13:00:42 INFO SparkContext: Submitted application: ETL_03_DWD_to_DWS
+26/05/11 13:00:42 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/05/11 13:00:42 INFO ResourceProfile: Limiting resource is cpu
+26/05/11 13:00:42 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/05/11 13:00:42 INFO SecurityManager: Changing view acls to: cty1576
+26/05/11 13:00:42 INFO SecurityManager: Changing modify acls to: cty1576
+26/05/11 13:00:42 INFO SecurityManager: Changing view acls groups to: 
+26/05/11 13:00:42 INFO SecurityManager: Changing modify acls groups to: 
+26/05/11 13:00:42 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: cty1576; groups with view permissions: EMPTY; users with modify permissions: cty1576; groups with modify permissions: EMPTY
+26/05/11 13:00:42 INFO Utils: Successfully started service 'sparkDriver' on port 39937.
+26/05/11 13:00:42 INFO SparkEnv: Registering MapOutputTracker
+26/05/11 13:00:42 INFO SparkEnv: Registering BlockManagerMaster
+26/05/11 13:00:42 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/05/11 13:00:42 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/05/11 13:00:42 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/05/11 13:00:42 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-1aa09ab6-9941-4957-9533-66dd9f4aaa60
+26/05/11 13:00:42 INFO MemoryStore: MemoryStore started with capacity 2.2 GiB
+26/05/11 13:00:42 INFO SparkEnv: Registering OutputCommitCoordinator
+26/05/11 13:00:42 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/05/11 13:00:42 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/05/11 13:00:43 INFO Executor: Starting executor ID driver on host 10.14.12.130
+26/05/11 13:00:43 INFO Executor: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:00:43 INFO Executor: Java version 11.0.30
+26/05/11 13:00:43 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/05/11 13:00:43 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@2573bac for default.
+26/05/11 13:00:43 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 46235.
+26/05/11 13:00:43 INFO NettyBlockTransferService: Server created on 10.14.12.130:46235
+26/05/11 13:00:43 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/05/11 13:00:43 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.14.12.130, 46235, None)
+26/05/11 13:00:43 INFO BlockManagerMasterEndpoint: Registering block manager 10.14.12.130:46235 with 2.2 GiB RAM, BlockManagerId(driver, 10.14.12.130, 46235, None)
+26/05/11 13:00:43 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.14.12.130, 46235, None)
+26/05/11 13:00:43 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.14.12.130, 46235, None)
+============================================================
+ETL 步骤 3: DWD → DWS 多维聚合汇总
+============================================================
+26/05/11 13:00:46 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+[INFO] DWD 层记录数: 29,983,682
+[INFO] 正在聚合: 用户日维度...
+26/05/11 13:01:44 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+  → dws.user_daily_behavior: 2,083,366 条
+[INFO] 正在聚合: 商品日维度...
+  → dws.item_daily_behavior: 7,972,161 条
+[INFO] 正在聚合: 类目日维度...
+  → dws.category_daily_behavior: 64,454 条
+[INFO] 正在聚合: 小时维度...
+  → dws.hourly_behavior: 216 条
+
+[SUCCESS] ETL 步骤 3 完成！DWS 层四张汇总表已就绪。
+
+============================================================
+  [SUCCESS] ETL 全流程完成！
+  可通过以下命令验证数据:
+    hive -e 'SELECT COUNT(*) FROM ods.user_behavior;'
+    hive -e 'SELECT COUNT(*) FROM dwd.user_behavior_detail;'
+    hive -e 'SHOW TABLES IN dws;'
+============================================================

@@ -1,0 +1,31 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Hive Session ID = 62c2ff35-b4c2-4fb0-a56b-4424690f0ede
+
+Logging initialized using configuration in jar:file:/opt/apache-hive-3.1.3-bin/lib/hive-common-3.1.3.jar!/hive-log4j2.properties Async: true
+Hive Session ID = b6590a2f-1f05-49ae-8f94-f613d6235e54
+OK
+1	812879	9083	262	474	40	12639
+2	3031354	5248	142	510	258	10804
+3	3845720	7797	200	262	33	10037
+4	2331370	5909	263	470	38	9428
+5	138964	6358	204	340	31	8980
+6	1535294	5353	194	332	122	8815
+7	2818406	4708	236	409	27	7731
+8	2560262	3235	93	397	214	7639
+9	4443059	4343	91	285	147	7511
+10	2032668	5909	156	158	18	7347
+11	2338453	5086	125	255	54	7276
+12	2453685	4443	199	324	55	7210
+13	4211339	5196	117	256	22	7047
+14	2279428	4250	307	280	38	6951
+15	1583704	4422	172	316	40	6918
+16	4649427	4747	134	241	15	6504
+17	59883	5325	87	109	18	6311
+18	987143	4774	139	157	14	6116
+19	705557	2892	56	268	151	5910
+20	3520504	4081	114	194	34	5733
+Time taken: 1.923 seconds, Fetched: 20 row(s)

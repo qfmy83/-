@@ -1,0 +1,28 @@
+[LOG] 主流水线总日志: /home/cty1576/bigdatacty1/logs/pipeline/run_full_pipeline_20260610_000639.log
+[LOG] 各阶段子日志会在 /home/cty1576/bigdatacty1/logs/pipeline/ 下分别生成
+╔════════════════════════════════════════════════════════════╗
+║     大数据购物行为分析 - 完整流水线                       ║
+║     基于 Hadoop + Spark + Kafka + Hive                    ║
+╚════════════════════════════════════════════════════════════╝
+
+▶▶▶ 阶段 1/4: 数据准备 ◀◀◀
+[LOG] 本次日志: /home/cty1576/bigdatacty1/logs/pipeline/01_prepare_data_20260610_000639.log
+============================================================
+  步骤 1: 数据准备
+============================================================
+  当前根分区剩余: 18GB
+
+[1/4] 检查数据文件...
+  ✓ 数据文件: /home/cty1576/bigdatacty1/data/UserBehavior.csv
+    大小: 1.1G
+    行数: 30000000
+
+[2/4] 数据预览（前5行）:
+1,2268318,2520377,pv,1511544070
+1,2333346,2520771,pv,1511561733
+1,2576651,149192,pv,1511572885
+1,3830808,4181361,pv,1511593493
+1,4365585,2520377,pv,1511596146
+
+[3/4] 创建 HDFS 目录...
+mkdir: Call From ubuntu/127.0.1.1 to localhost:9000 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused

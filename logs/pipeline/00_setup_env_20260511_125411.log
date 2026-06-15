@@ -1,0 +1,59 @@
+[LOG] 本次日志: /home/cty1576/bigdatacty/logs/pipeline/00_setup_env_20260511_125411.log
+============================================================
+  步骤 0: 环境配置（cty1576 用户）
+============================================================
+
+[1/9] 配置环境变量到 /home/cty1576/.bashrc...
+  环境变量已存在，跳过写入
+
+[2/9] 给 cty1576 赋予大数据组件目录权限...
+  ✓ /usr/local/hadoop
+  ✓ /opt/spark
+  ✓ /opt/hive
+  ✓ /usr/local/kafka
+
+[3/9] 写入 JAVA_HOME 到 hadoop-env.sh / yarn-env.sh...
+  ✓ /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+  ✓ /usr/local/hadoop/etc/hadoop/yarn-env.sh
+
+[4/9] 修复配置文件里的遗留路径（/home/lenovo, /home/hadoop → /home/cty1576）...
+
+[5/9] 创建数据目录（/home/cty1576/hadoop_data, kafka_logs, zookeeper_data）...
+  ✓ 数据目录就绪
+
+[6/9] 软链 hive-site.xml 到 Spark conf...
+  ✓ 已软链 hive-site.xml → Spark conf
+
+[7/9] SSH 免密 + Python 依赖...
+  ✓ SSH 密钥已存在
+  [INFO] 安装 Python 依赖: pandas numpy pyecharts kafka-python
+Requirement already satisfied: pandas in /usr/local/lib/python3.10/dist-packages (2.3.3)
+Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (2.2.6)
+Requirement already satisfied: pyecharts in /usr/local/lib/python3.10/dist-packages (2.1.0)
+Requirement already satisfied: kafka-python in /usr/local/lib/python3.10/dist-packages (2.3.1)
+Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas) (2026.2)
+Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.10/dist-packages (from pandas) (2026.2)
+Requirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.10/dist-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: prettytable in /usr/local/lib/python3.10/dist-packages (from pyecharts) (3.17.0)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/dist-packages (from pyecharts) (3.1.6)
+Requirement already satisfied: simplejson in /usr/local/lib/python3.10/dist-packages (from pyecharts) (4.1.1)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.8.2->pandas) (1.16.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/lib/python3/dist-packages (from jinja2->pyecharts) (2.0.1)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.10/dist-packages (from prettytable->pyecharts) (0.7.0)
+
+[8/9] 检查 NameNode 是否需要格式化...
+  ✓ NameNode 已格式化（current/ 存在），跳过
+
+[9/9] 检查 Hive Derby Schema 是否需要初始化...
+  ✓ Hive Schema 已初始化，跳过
+
+============================================================
+  环境配置完成！
+============================================================
+  下一步:
+    source ~/.bashrc
+    bash scripts/start_all_services.sh
+    bash scripts/run_full_pipeline.sh
+
+  本次配置日志: /home/cty1576/bigdatacty/logs/pipeline/00_setup_env_20260511_125411.log
+============================================================

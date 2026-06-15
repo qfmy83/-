@@ -1,0 +1,30 @@
+Configured Capacity: 62557859840 (58.26 GB)
+Present Capacity: 15816130560 (14.73 GB)
+DFS Remaining: 13763444736 (12.82 GB)
+DFS Used: 2052685824 (1.91 GB)
+DFS Used%: 12.98%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (1):
+
+Name: 127.0.0.1:9866 (localhost)
+Hostname: ubuntu
+Decommission Status : Normal
+Configured Capacity: 62557859840 (58.26 GB)
+DFS Used: 2052685824 (1.91 GB)
+Non DFS Used: 43530780672 (40.54 GB)
+DFS Remaining: 13763444736 (12.82 GB)
+DFS Used%: 3.28%

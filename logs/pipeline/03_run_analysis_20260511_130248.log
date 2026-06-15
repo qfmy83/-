@@ -1,0 +1,1006 @@
+[LOG] 本次日志: /home/cty1576/bigdatacty/logs/pipeline/03_run_analysis_20260511_130248.log
+============================================================
+  步骤 3: 运行全部分析任务
+============================================================
+
+[1/12] 任务1: 每日PV/UV趋势
+-------------------------------------------
+26/05/11 13:02:50 WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 10.14.12.130 instead (on interface ens33)
+26/05/11 13:02:50 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/05/11 13:02:51 INFO SparkContext: Running Spark version 3.5.0
+26/05/11 13:02:51 INFO SparkContext: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:02:51 INFO SparkContext: Java version 11.0.30
+26/05/11 13:02:51 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/05/11 13:02:51 INFO ResourceUtils: ==============================================================
+26/05/11 13:02:51 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/05/11 13:02:51 INFO ResourceUtils: ==============================================================
+26/05/11 13:02:51 INFO SparkContext: Submitted application: Analysis_01_DailyPVUV
+26/05/11 13:02:51 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/05/11 13:02:51 INFO ResourceProfile: Limiting resource is cpu
+26/05/11 13:02:51 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/05/11 13:02:51 INFO SecurityManager: Changing view acls to: cty1576
+26/05/11 13:02:51 INFO SecurityManager: Changing modify acls to: cty1576
+26/05/11 13:02:51 INFO SecurityManager: Changing view acls groups to: 
+26/05/11 13:02:51 INFO SecurityManager: Changing modify acls groups to: 
+26/05/11 13:02:51 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: cty1576; groups with view permissions: EMPTY; users with modify permissions: cty1576; groups with modify permissions: EMPTY
+26/05/11 13:02:51 INFO Utils: Successfully started service 'sparkDriver' on port 41623.
+26/05/11 13:02:51 INFO SparkEnv: Registering MapOutputTracker
+26/05/11 13:02:51 INFO SparkEnv: Registering BlockManagerMaster
+26/05/11 13:02:51 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/05/11 13:02:51 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/05/11 13:02:51 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/05/11 13:02:51 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-88d2284c-4a88-4b2e-830c-0e57fbbd3772
+26/05/11 13:02:51 INFO MemoryStore: MemoryStore started with capacity 2.2 GiB
+26/05/11 13:02:51 INFO SparkEnv: Registering OutputCommitCoordinator
+26/05/11 13:02:51 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/05/11 13:02:51 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/05/11 13:02:52 INFO Executor: Starting executor ID driver on host 10.14.12.130
+26/05/11 13:02:52 INFO Executor: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:02:52 INFO Executor: Java version 11.0.30
+26/05/11 13:02:52 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/05/11 13:02:52 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@355f09cb for default.
+26/05/11 13:02:52 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39503.
+26/05/11 13:02:52 INFO NettyBlockTransferService: Server created on 10.14.12.130:39503
+26/05/11 13:02:52 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/05/11 13:02:52 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.14.12.130, 39503, None)
+26/05/11 13:02:52 INFO BlockManagerMasterEndpoint: Registering block manager 10.14.12.130:39503 with 2.2 GiB RAM, BlockManagerId(driver, 10.14.12.130, 39503, None)
+26/05/11 13:02:52 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.14.12.130, 39503, None)
+26/05/11 13:02:52 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.14.12.130, 39503, None)
+26/05/11 13:02:54 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+============================================================
+分析任务 1: 每日 PV/UV 流量趋势
+============================================================
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.util.SizeEstimator$ (file:/opt/spark-3.5.0-bin-hadoop3/jars/spark-core_2.12-3.5.0.jar) to field java.math.BigDecimal.intVal
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.util.SizeEstimator$
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
++----------+-------+------+----------+---------------+
+|event_date|pv     |uv    |item_count|avg_pv_per_user|
++----------+-------+------+----------+---------------+
+|2017-11-25|2786024|211008|798082    |13.20          |
+|2017-11-26|2852181|213843|817939    |13.34          |
+|2017-11-27|2703003|212269|796403    |12.73          |
+|2017-11-28|2651188|212140|800548    |12.50          |
+|2017-11-29|2751029|214954|817014    |12.80          |
+|2017-11-30|2803128|218439|816330    |12.83          |
+|2017-12-01|2916808|221168|828784    |13.19          |
+|2017-12-02|3707739|290299|962952    |12.77          |
+|2017-12-03|3674000|289246|962986    |12.70          |
++----------+-------+------+----------+---------------+
+
+26/05/11 13:03:34 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+[SUCCESS] 任务 1 完成！
+  ✓ 任务1: 每日PV/UV趋势 完成
+
+[2/12] 任务2: 24小时活跃分布
+-------------------------------------------
+26/05/11 13:03:37 WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 10.14.12.130 instead (on interface ens33)
+26/05/11 13:03:37 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/05/11 13:03:38 INFO SparkContext: Running Spark version 3.5.0
+26/05/11 13:03:38 INFO SparkContext: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:03:38 INFO SparkContext: Java version 11.0.30
+26/05/11 13:03:38 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/05/11 13:03:38 INFO ResourceUtils: ==============================================================
+26/05/11 13:03:38 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/05/11 13:03:38 INFO ResourceUtils: ==============================================================
+26/05/11 13:03:38 INFO SparkContext: Submitted application: Analysis_02_HourDistribution
+26/05/11 13:03:38 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/05/11 13:03:38 INFO ResourceProfile: Limiting resource is cpu
+26/05/11 13:03:38 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/05/11 13:03:38 INFO SecurityManager: Changing view acls to: cty1576
+26/05/11 13:03:38 INFO SecurityManager: Changing modify acls to: cty1576
+26/05/11 13:03:38 INFO SecurityManager: Changing view acls groups to: 
+26/05/11 13:03:38 INFO SecurityManager: Changing modify acls groups to: 
+26/05/11 13:03:38 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: cty1576; groups with view permissions: EMPTY; users with modify permissions: cty1576; groups with modify permissions: EMPTY
+26/05/11 13:03:38 INFO Utils: Successfully started service 'sparkDriver' on port 33157.
+26/05/11 13:03:38 INFO SparkEnv: Registering MapOutputTracker
+26/05/11 13:03:38 INFO SparkEnv: Registering BlockManagerMaster
+26/05/11 13:03:38 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/05/11 13:03:38 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/05/11 13:03:38 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/05/11 13:03:38 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-dd5c0817-6264-4040-a693-d849454fb6ec
+26/05/11 13:03:38 INFO MemoryStore: MemoryStore started with capacity 2.2 GiB
+26/05/11 13:03:38 INFO SparkEnv: Registering OutputCommitCoordinator
+26/05/11 13:03:38 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/05/11 13:03:38 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/05/11 13:03:38 INFO Executor: Starting executor ID driver on host 10.14.12.130
+26/05/11 13:03:38 INFO Executor: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:03:38 INFO Executor: Java version 11.0.30
+26/05/11 13:03:38 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/05/11 13:03:38 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@1743619c for default.
+26/05/11 13:03:38 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41421.
+26/05/11 13:03:38 INFO NettyBlockTransferService: Server created on 10.14.12.130:41421
+26/05/11 13:03:38 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/05/11 13:03:38 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.14.12.130, 41421, None)
+26/05/11 13:03:38 INFO BlockManagerMasterEndpoint: Registering block manager 10.14.12.130:41421 with 2.2 GiB RAM, BlockManagerId(driver, 10.14.12.130, 41421, None)
+26/05/11 13:03:38 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.14.12.130, 41421, None)
+26/05/11 13:03:38 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.14.12.130, 41421, None)
+26/05/11 13:03:41 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+============================================================
+分析任务 2: 24小时用户活跃分布
+============================================================
++----------+-------+------+----------+---------+
+|event_hour|pv     |uv    |cart_count|buy_count|
++----------+-------+------+----------+---------+
+|0         |912711 |94804 |55264     |16950    |
+|1         |418956 |49486 |25529     |6845     |
+|2         |229325 |29247 |14026     |3595     |
+|3         |154288 |20949 |9794      |2312     |
+|4         |134561 |19010 |8472      |1921     |
+|5         |173407 |25037 |11233     |2422     |
+|6         |365374 |53555 |24284     |5451     |
+|7         |663654 |98460 |43894     |11099    |
+|8         |913922 |132980|57570     |19151    |
+|9         |1116761|155838|69387     |28956    |
+|10        |1295795|172614|80186     |38298    |
+|11        |1260667|175513|78479     |36308    |
+|12        |1274145|177609|77026     |35385    |
+|13        |1397732|180421|84438     |36959    |
+|14        |1393327|177736|83905     |36560    |
+|15        |1446247|180839|86514     |36670    |
+|16        |1382770|178894|83498     |35006    |
+|17        |1254991|174778|77163     |30344    |
+|18        |1294093|174242|76566     |28439    |
+|19        |1630739|186738|95393     |34267    |
+|20        |1973082|198505|118266    |40010    |
+|21        |2256834|204588|140412    |43284    |
+|22        |2223351|194264|146271    |40973    |
+|23        |1678368|153323|119310    |29646    |
++----------+-------+------+----------+---------+
+
+26/05/11 13:04:05 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+[SUCCESS] 任务 2 完成！
+  ✓ 任务2: 24小时活跃分布 完成
+
+[3/12] 任务3: 用户行为转化漏斗
+-------------------------------------------
+26/05/11 13:04:07 WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 10.14.12.130 instead (on interface ens33)
+26/05/11 13:04:07 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/05/11 13:04:08 INFO SparkContext: Running Spark version 3.5.0
+26/05/11 13:04:08 INFO SparkContext: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:04:08 INFO SparkContext: Java version 11.0.30
+26/05/11 13:04:08 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/05/11 13:04:08 INFO ResourceUtils: ==============================================================
+26/05/11 13:04:08 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/05/11 13:04:08 INFO ResourceUtils: ==============================================================
+26/05/11 13:04:08 INFO SparkContext: Submitted application: Analysis_03_BehaviorFunnel
+26/05/11 13:04:08 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/05/11 13:04:08 INFO ResourceProfile: Limiting resource is cpu
+26/05/11 13:04:08 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/05/11 13:04:08 INFO SecurityManager: Changing view acls to: cty1576
+26/05/11 13:04:08 INFO SecurityManager: Changing modify acls to: cty1576
+26/05/11 13:04:08 INFO SecurityManager: Changing view acls groups to: 
+26/05/11 13:04:08 INFO SecurityManager: Changing modify acls groups to: 
+26/05/11 13:04:08 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: cty1576; groups with view permissions: EMPTY; users with modify permissions: cty1576; groups with modify permissions: EMPTY
+26/05/11 13:04:09 INFO Utils: Successfully started service 'sparkDriver' on port 46139.
+26/05/11 13:04:09 INFO SparkEnv: Registering MapOutputTracker
+26/05/11 13:04:09 INFO SparkEnv: Registering BlockManagerMaster
+26/05/11 13:04:09 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/05/11 13:04:09 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/05/11 13:04:09 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/05/11 13:04:09 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-3d5cb5ba-a754-467b-9a41-125ecbfb1930
+26/05/11 13:04:09 INFO MemoryStore: MemoryStore started with capacity 2.2 GiB
+26/05/11 13:04:09 INFO SparkEnv: Registering OutputCommitCoordinator
+26/05/11 13:04:09 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/05/11 13:04:09 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/05/11 13:04:09 INFO Executor: Starting executor ID driver on host 10.14.12.130
+26/05/11 13:04:09 INFO Executor: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:04:09 INFO Executor: Java version 11.0.30
+26/05/11 13:04:09 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/05/11 13:04:09 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@11008188 for default.
+26/05/11 13:04:09 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44743.
+26/05/11 13:04:09 INFO NettyBlockTransferService: Server created on 10.14.12.130:44743
+26/05/11 13:04:09 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/05/11 13:04:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.14.12.130, 44743, None)
+26/05/11 13:04:09 INFO BlockManagerMasterEndpoint: Registering block manager 10.14.12.130:44743 with 2.2 GiB RAM, BlockManagerId(driver, 10.14.12.130, 44743, None)
+26/05/11 13:04:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.14.12.130, 44743, None)
+26/05/11 13:04:09 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.14.12.130, 44743, None)
+26/05/11 13:04:12 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+============================================================
+分析任务 3: 用户行为转化漏斗
+============================================================
++----------+----------+------+------------+
+|behavior  |user_count|ratio |overall_rate|
++----------+----------+------+------------+
+|浏览(pv)  |294355    |100.0 |100.0       |
+|收藏(fav) |117106    |39.78 |39.78       |
+|加购(cart)|221462    |189.11|75.24       |
+|购买(buy) |200853    |90.69 |68.23       |
++----------+----------+------+------------+
+
+26/05/11 13:04:30 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+[SUCCESS] 任务 3 完成！
+  ✓ 任务3: 用户行为转化漏斗 完成
+
+[4/12] 任务4: TOP100热门商品
+-------------------------------------------
+26/05/11 13:04:33 WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 10.14.12.130 instead (on interface ens33)
+26/05/11 13:04:33 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/05/11 13:04:34 INFO SparkContext: Running Spark version 3.5.0
+26/05/11 13:04:34 INFO SparkContext: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:04:34 INFO SparkContext: Java version 11.0.30
+26/05/11 13:04:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/05/11 13:04:34 INFO ResourceUtils: ==============================================================
+26/05/11 13:04:34 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/05/11 13:04:34 INFO ResourceUtils: ==============================================================
+26/05/11 13:04:34 INFO SparkContext: Submitted application: Analysis_04_TopItems
+26/05/11 13:04:34 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/05/11 13:04:34 INFO ResourceProfile: Limiting resource is cpu
+26/05/11 13:04:34 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/05/11 13:04:34 INFO SecurityManager: Changing view acls to: cty1576
+26/05/11 13:04:34 INFO SecurityManager: Changing modify acls to: cty1576
+26/05/11 13:04:34 INFO SecurityManager: Changing view acls groups to: 
+26/05/11 13:04:34 INFO SecurityManager: Changing modify acls groups to: 
+26/05/11 13:04:34 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: cty1576; groups with view permissions: EMPTY; users with modify permissions: cty1576; groups with modify permissions: EMPTY
+26/05/11 13:04:35 INFO Utils: Successfully started service 'sparkDriver' on port 40567.
+26/05/11 13:04:35 INFO SparkEnv: Registering MapOutputTracker
+26/05/11 13:04:35 INFO SparkEnv: Registering BlockManagerMaster
+26/05/11 13:04:35 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/05/11 13:04:35 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/05/11 13:04:35 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/05/11 13:04:35 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-6115e264-93c3-4bbd-98ca-32c41e091740
+26/05/11 13:04:35 INFO MemoryStore: MemoryStore started with capacity 2.2 GiB
+26/05/11 13:04:35 INFO SparkEnv: Registering OutputCommitCoordinator
+26/05/11 13:04:35 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/05/11 13:04:35 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/05/11 13:04:35 INFO Executor: Starting executor ID driver on host 10.14.12.130
+26/05/11 13:04:35 INFO Executor: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:04:35 INFO Executor: Java version 11.0.30
+26/05/11 13:04:35 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/05/11 13:04:35 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@4c480deb for default.
+26/05/11 13:04:35 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40385.
+26/05/11 13:04:35 INFO NettyBlockTransferService: Server created on 10.14.12.130:40385
+26/05/11 13:04:35 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/05/11 13:04:35 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.14.12.130, 40385, None)
+26/05/11 13:04:35 INFO BlockManagerMasterEndpoint: Registering block manager 10.14.12.130:40385 with 2.2 GiB RAM, BlockManagerId(driver, 10.14.12.130, 40385, None)
+26/05/11 13:04:35 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.14.12.130, 40385, None)
+26/05/11 13:04:35 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.14.12.130, 40385, None)
+26/05/11 13:04:38 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+============================================================
+分析任务 4: TOP100 热门商品排行
+============================================================
+26/05/11 13:04:39 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:04:39 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:04:39 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:04:39 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:04:39 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:04:56 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:04:56 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:04:59 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:04:59 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:05:02 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:05:02 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
++-------+-------+--------+---------+----------+---------+-----------+
+|ranking|item_id|pv_count|fav_count|cart_count|buy_count|total_score|
++-------+-------+--------+---------+----------+---------+-----------+
+|1      |812879 |9083    |262      |474       |40       |12639      |
+|2      |3031354|5248    |142      |510       |258      |10804      |
+|3      |3845720|7797    |200      |262       |33       |10037      |
+|4      |2331370|5909    |263      |470       |38       |9428       |
+|5      |138964 |6358    |204      |340       |31       |8980       |
+|6      |1535294|5353    |194      |332       |122      |8815       |
+|7      |2818406|4708    |236      |409       |27       |7731       |
+|8      |2560262|3235    |93       |397       |214      |7639       |
+|9      |4443059|4343    |91       |285       |147      |7511       |
+|10     |2032668|5909    |156      |158       |18       |7347       |
+|11     |2338453|5086    |125      |255       |54       |7276       |
+|12     |2453685|4443    |199      |324       |55       |7210       |
+|13     |4211339|5196    |117      |256       |22       |7047       |
+|14     |2279428|4250    |307      |280       |38       |6951       |
+|15     |1583704|4422    |172      |316       |40       |6918       |
+|16     |4649427|4747    |134      |241       |15       |6504       |
+|17     |59883  |5325    |87       |109       |18       |6311       |
+|18     |987143 |4774    |139      |157       |14       |6116       |
+|19     |705557 |2892    |56       |268       |151      |5910       |
+|20     |3520504|4081    |114      |194       |34       |5733       |
++-------+-------+--------+---------+----------+---------+-----------+
+only showing top 20 rows
+
+26/05/11 13:05:03 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:05:03 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:05:04 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+26/05/11 13:05:04 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:05:04 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[SUCCESS] 任务 4 完成！
+  ✓ 任务4: TOP100热门商品 完成
+
+[5/12] 任务5: TOP20热门类目
+-------------------------------------------
+26/05/11 13:05:06 WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 10.14.12.130 instead (on interface ens33)
+26/05/11 13:05:06 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/05/11 13:05:07 INFO SparkContext: Running Spark version 3.5.0
+26/05/11 13:05:07 INFO SparkContext: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:05:07 INFO SparkContext: Java version 11.0.30
+26/05/11 13:05:07 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/05/11 13:05:07 INFO ResourceUtils: ==============================================================
+26/05/11 13:05:07 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/05/11 13:05:07 INFO ResourceUtils: ==============================================================
+26/05/11 13:05:07 INFO SparkContext: Submitted application: Analysis_05_TopCategories
+26/05/11 13:05:07 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/05/11 13:05:07 INFO ResourceProfile: Limiting resource is cpu
+26/05/11 13:05:07 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/05/11 13:05:07 INFO SecurityManager: Changing view acls to: cty1576
+26/05/11 13:05:07 INFO SecurityManager: Changing modify acls to: cty1576
+26/05/11 13:05:07 INFO SecurityManager: Changing view acls groups to: 
+26/05/11 13:05:07 INFO SecurityManager: Changing modify acls groups to: 
+26/05/11 13:05:07 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: cty1576; groups with view permissions: EMPTY; users with modify permissions: cty1576; groups with modify permissions: EMPTY
+26/05/11 13:05:07 INFO Utils: Successfully started service 'sparkDriver' on port 38861.
+26/05/11 13:05:07 INFO SparkEnv: Registering MapOutputTracker
+26/05/11 13:05:07 INFO SparkEnv: Registering BlockManagerMaster
+26/05/11 13:05:07 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/05/11 13:05:07 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/05/11 13:05:07 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/05/11 13:05:07 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-a87c42d6-5fb6-42d7-98f1-60433d839562
+26/05/11 13:05:07 INFO MemoryStore: MemoryStore started with capacity 2.2 GiB
+26/05/11 13:05:08 INFO SparkEnv: Registering OutputCommitCoordinator
+26/05/11 13:05:08 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/05/11 13:05:08 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/05/11 13:05:08 INFO Executor: Starting executor ID driver on host 10.14.12.130
+26/05/11 13:05:08 INFO Executor: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:05:08 INFO Executor: Java version 11.0.30
+26/05/11 13:05:08 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/05/11 13:05:08 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@24f2eb07 for default.
+26/05/11 13:05:08 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45427.
+26/05/11 13:05:08 INFO NettyBlockTransferService: Server created on 10.14.12.130:45427
+26/05/11 13:05:08 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/05/11 13:05:08 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.14.12.130, 45427, None)
+26/05/11 13:05:08 INFO BlockManagerMasterEndpoint: Registering block manager 10.14.12.130:45427 with 2.2 GiB RAM, BlockManagerId(driver, 10.14.12.130, 45427, None)
+26/05/11 13:05:08 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.14.12.130, 45427, None)
+26/05/11 13:05:08 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.14.12.130, 45427, None)
+26/05/11 13:05:11 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+============================================================
+分析任务 5: TOP20 热门类目及转化率
+============================================================
+26/05/11 13:05:12 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:05:12 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:05:12 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:05:12 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:05:12 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:05:20 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:05:20 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:05:20 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:05:20 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.util.SizeEstimator$ (file:/opt/spark-3.5.0-bin-hadoop3/jars/spark-core_2.12-3.5.0.jar) to field java.math.BigDecimal.intVal
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.util.SizeEstimator$
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+26/05/11 13:05:21 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:05:21 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
++-------+-----------+--------+---------+---------------+
+|ranking|category_id|pv_count|buy_count|conversion_rate|
++-------+-----------+--------+---------+---------------+
+|1      |4756105    |1369859 |8588     |0.6269         |
+|2      |4145813    |957987  |9650     |1.0073         |
+|3      |2355072    |942504  |3685     |0.3910         |
+|4      |3607361    |885238  |3883     |0.4386         |
+|5      |982926     |844666  |7460     |0.8832         |
+|6      |2520377    |607148  |2987     |0.4920         |
+|7      |4801426    |562879  |7990     |1.4195         |
+|8      |1320293    |534990  |5088     |0.9510         |
+|9      |2465336    |456828  |4198     |0.9189         |
+|10     |3002561    |429431  |5061     |1.1785         |
+|11     |2735466    |337509  |10217    |3.0272         |
+|12     |4181361    |304068  |2627     |0.8640         |
+|13     |149192     |299136  |3373     |1.1276         |
+|14     |1080785    |288402  |1343     |0.4657         |
+|15     |2885642    |286593  |9372     |3.2701         |
+|16     |4217906    |277750  |4390     |1.5806         |
+|17     |154040     |270107  |728      |0.2695         |
+|18     |3738615    |251281  |2973     |1.1831         |
+|19     |1879194    |230991  |4025     |1.7425         |
+|20     |2640118    |217822  |5373     |2.4667         |
++-------+-----------+--------+---------+---------------+
+
+26/05/11 13:05:23 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:05:23 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:05:23 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+26/05/11 13:05:24 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:05:24 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[SUCCESS] 任务 5 完成！
+  ✓ 任务5: TOP20热门类目 完成
+
+[6/12] 任务6: 工作日vs周末
+-------------------------------------------
+26/05/11 13:05:26 WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 10.14.12.130 instead (on interface ens33)
+26/05/11 13:05:26 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/05/11 13:05:27 INFO SparkContext: Running Spark version 3.5.0
+26/05/11 13:05:27 INFO SparkContext: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:05:27 INFO SparkContext: Java version 11.0.30
+26/05/11 13:05:27 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/05/11 13:05:27 INFO ResourceUtils: ==============================================================
+26/05/11 13:05:27 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/05/11 13:05:27 INFO ResourceUtils: ==============================================================
+26/05/11 13:05:27 INFO SparkContext: Submitted application: Analysis_06_WeekdayWeekend
+26/05/11 13:05:27 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/05/11 13:05:27 INFO ResourceProfile: Limiting resource is cpu
+26/05/11 13:05:27 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/05/11 13:05:27 INFO SecurityManager: Changing view acls to: cty1576
+26/05/11 13:05:27 INFO SecurityManager: Changing modify acls to: cty1576
+26/05/11 13:05:27 INFO SecurityManager: Changing view acls groups to: 
+26/05/11 13:05:27 INFO SecurityManager: Changing modify acls groups to: 
+26/05/11 13:05:27 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: cty1576; groups with view permissions: EMPTY; users with modify permissions: cty1576; groups with modify permissions: EMPTY
+26/05/11 13:05:27 INFO Utils: Successfully started service 'sparkDriver' on port 40783.
+26/05/11 13:05:27 INFO SparkEnv: Registering MapOutputTracker
+26/05/11 13:05:27 INFO SparkEnv: Registering BlockManagerMaster
+26/05/11 13:05:27 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/05/11 13:05:27 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/05/11 13:05:27 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/05/11 13:05:27 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-5bae5f68-7287-45a5-b5d5-b0d3630101f1
+26/05/11 13:05:27 INFO MemoryStore: MemoryStore started with capacity 2.2 GiB
+26/05/11 13:05:27 INFO SparkEnv: Registering OutputCommitCoordinator
+26/05/11 13:05:27 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/05/11 13:05:27 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/05/11 13:05:28 INFO Executor: Starting executor ID driver on host 10.14.12.130
+26/05/11 13:05:28 INFO Executor: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:05:28 INFO Executor: Java version 11.0.30
+26/05/11 13:05:28 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/05/11 13:05:28 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@355f09cb for default.
+26/05/11 13:05:28 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 46655.
+26/05/11 13:05:28 INFO NettyBlockTransferService: Server created on 10.14.12.130:46655
+26/05/11 13:05:28 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/05/11 13:05:28 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.14.12.130, 46655, None)
+26/05/11 13:05:28 INFO BlockManagerMasterEndpoint: Registering block manager 10.14.12.130:46655 with 2.2 GiB RAM, BlockManagerId(driver, 10.14.12.130, 46655, None)
+26/05/11 13:05:28 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.14.12.130, 46655, None)
+26/05/11 13:05:28 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.14.12.130, 46655, None)
+26/05/11 13:05:30 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+============================================================
+分析任务 6: 工作日 vs 周末行为对比
+============================================================
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.util.SizeEstimator$ (file:/opt/spark-3.5.0-bin-hadoop3/jars/spark-core_2.12-3.5.0.jar) to field java.math.BigDecimal.intVal
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.util.SizeEstimator$
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
++--------+--------+-----------+----------+------------+
+|day_type|behavior|total_count|user_count|avg_per_user|
++--------+--------+-----------+----------+------------+
+|weekday |buy     |325808     |143631    |2.27        |
+|weekday |cart    |849084     |176847    |4.80        |
+|weekday |fav     |448106     |88728     |5.05        |
+|weekday |pv      |13825156   |290273    |47.63       |
+|weekend |buy     |275043     |134035    |2.05        |
+|weekend |cart    |817796     |183964    |4.45        |
+|weekend |fav     |422745     |90089     |4.69        |
+|weekend |pv      |13019944   |293802    |44.32       |
++--------+--------+-----------+----------+------------+
+
+26/05/11 13:05:52 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+[SUCCESS] 任务 6 完成！
+  ✓ 任务6: 工作日vs周末 完成
+
+[7/12] 任务7: 用户留存分析
+-------------------------------------------
+26/05/11 13:05:54 WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 10.14.12.130 instead (on interface ens33)
+26/05/11 13:05:54 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/05/11 13:05:55 INFO SparkContext: Running Spark version 3.5.0
+26/05/11 13:05:55 INFO SparkContext: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:05:55 INFO SparkContext: Java version 11.0.30
+26/05/11 13:05:55 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/05/11 13:05:55 INFO ResourceUtils: ==============================================================
+26/05/11 13:05:55 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/05/11 13:05:55 INFO ResourceUtils: ==============================================================
+26/05/11 13:05:55 INFO SparkContext: Submitted application: Analysis_07_Retention
+26/05/11 13:05:55 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/05/11 13:05:55 INFO ResourceProfile: Limiting resource is cpu
+26/05/11 13:05:55 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/05/11 13:05:55 INFO SecurityManager: Changing view acls to: cty1576
+26/05/11 13:05:55 INFO SecurityManager: Changing modify acls to: cty1576
+26/05/11 13:05:55 INFO SecurityManager: Changing view acls groups to: 
+26/05/11 13:05:55 INFO SecurityManager: Changing modify acls groups to: 
+26/05/11 13:05:55 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: cty1576; groups with view permissions: EMPTY; users with modify permissions: cty1576; groups with modify permissions: EMPTY
+26/05/11 13:05:55 INFO Utils: Successfully started service 'sparkDriver' on port 42767.
+26/05/11 13:05:55 INFO SparkEnv: Registering MapOutputTracker
+26/05/11 13:05:55 INFO SparkEnv: Registering BlockManagerMaster
+26/05/11 13:05:55 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/05/11 13:05:55 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/05/11 13:05:55 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/05/11 13:05:55 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-c54d621a-55ab-48fc-af2b-e70b0403aae5
+26/05/11 13:05:55 INFO MemoryStore: MemoryStore started with capacity 2.2 GiB
+26/05/11 13:05:55 INFO SparkEnv: Registering OutputCommitCoordinator
+26/05/11 13:05:55 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/05/11 13:05:55 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/05/11 13:05:56 INFO Executor: Starting executor ID driver on host 10.14.12.130
+26/05/11 13:05:56 INFO Executor: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:05:56 INFO Executor: Java version 11.0.30
+26/05/11 13:05:56 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/05/11 13:05:56 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@4f76c512 for default.
+26/05/11 13:05:56 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33299.
+26/05/11 13:05:56 INFO NettyBlockTransferService: Server created on 10.14.12.130:33299
+26/05/11 13:05:56 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/05/11 13:05:56 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.14.12.130, 33299, None)
+26/05/11 13:05:56 INFO BlockManagerMasterEndpoint: Registering block manager 10.14.12.130:33299 with 2.2 GiB RAM, BlockManagerId(driver, 10.14.12.130, 33299, None)
+26/05/11 13:05:56 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.14.12.130, 33299, None)
+26/05/11 13:05:56 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.14.12.130, 33299, None)
+26/05/11 13:05:58 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+============================================================
+分析任务 7: 用户留存分析
+============================================================
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.util.SizeEstimator$ (file:/opt/spark-3.5.0-bin-hadoop3/jars/spark-core_2.12-3.5.0.jar) to field java.math.BigDecimal.intVal
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.util.SizeEstimator$
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
++----------+---------+-----+-----+-----+
+|first_date|new_users|day_1|day_2|day_3|
++----------+---------+-----+-----+-----+
+|2017-11-25|211008   |78.76|76.79|75.95|
+|2017-11-26|47649    |65.07|64.49|65.88|
+|2017-11-27|19230    |61.13|62.37|64.76|
+|2017-11-28|9390     |62.11|63.17|66.70|
+|2017-11-29|5351     |69.39|72.06|96.47|
+|2017-11-30|2871     |94.60|95.92|95.26|
+|2017-12-01|67       |92.54|95.52|0.00 |
+|2017-12-02|9        |77.78|0.00 |0.00 |
++----------+---------+-----+-----+-----+
+
+26/05/11 13:06:32 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+[SUCCESS] 任务 7 完成！
+  ✓ 任务7: 用户留存分析 完成
+
+[8/12] 任务8: RFM用户分群
+-------------------------------------------
+26/05/11 13:06:35 WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 10.14.12.130 instead (on interface ens33)
+26/05/11 13:06:35 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/05/11 13:06:36 INFO SparkContext: Running Spark version 3.5.0
+26/05/11 13:06:36 INFO SparkContext: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:06:36 INFO SparkContext: Java version 11.0.30
+26/05/11 13:06:36 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/05/11 13:06:37 INFO ResourceUtils: ==============================================================
+26/05/11 13:06:37 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/05/11 13:06:37 INFO ResourceUtils: ==============================================================
+26/05/11 13:06:37 INFO SparkContext: Submitted application: Analysis_08_RFM
+26/05/11 13:06:37 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/05/11 13:06:37 INFO ResourceProfile: Limiting resource is cpu
+26/05/11 13:06:37 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/05/11 13:06:37 INFO SecurityManager: Changing view acls to: cty1576
+26/05/11 13:06:37 INFO SecurityManager: Changing modify acls to: cty1576
+26/05/11 13:06:37 INFO SecurityManager: Changing view acls groups to: 
+26/05/11 13:06:37 INFO SecurityManager: Changing modify acls groups to: 
+26/05/11 13:06:37 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: cty1576; groups with view permissions: EMPTY; users with modify permissions: cty1576; groups with modify permissions: EMPTY
+26/05/11 13:06:37 INFO Utils: Successfully started service 'sparkDriver' on port 39401.
+26/05/11 13:06:37 INFO SparkEnv: Registering MapOutputTracker
+26/05/11 13:06:37 INFO SparkEnv: Registering BlockManagerMaster
+26/05/11 13:06:37 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/05/11 13:06:37 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/05/11 13:06:37 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/05/11 13:06:37 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-dfdf0069-368d-42f8-aaa5-bb2e6d512353
+26/05/11 13:06:37 INFO MemoryStore: MemoryStore started with capacity 2.2 GiB
+26/05/11 13:06:37 INFO SparkEnv: Registering OutputCommitCoordinator
+26/05/11 13:06:37 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/05/11 13:06:37 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/05/11 13:06:37 INFO Executor: Starting executor ID driver on host 10.14.12.130
+26/05/11 13:06:37 INFO Executor: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:06:37 INFO Executor: Java version 11.0.30
+26/05/11 13:06:37 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/05/11 13:06:37 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@559ba7a3 for default.
+26/05/11 13:06:37 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33427.
+26/05/11 13:06:37 INFO NettyBlockTransferService: Server created on 10.14.12.130:33427
+26/05/11 13:06:37 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/05/11 13:06:37 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.14.12.130, 33427, None)
+26/05/11 13:06:37 INFO BlockManagerMasterEndpoint: Registering block manager 10.14.12.130:33427 with 2.2 GiB RAM, BlockManagerId(driver, 10.14.12.130, 33427, None)
+26/05/11 13:06:37 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.14.12.130, 33427, None)
+26/05/11 13:06:37 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.14.12.130, 33427, None)
+26/05/11 13:06:40 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+============================================================
+分析任务 8: RFM 用户分群
+============================================================
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.util.SizeEstimator$ (file:/opt/spark-3.5.0-bin-hadoop3/jars/spark-core_2.12-3.5.0.jar) to field java.math.BigDecimal.intVal
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.util.SizeEstimator$
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] 参与 RFM 分析的购买用户数: 200,853
+[INFO] RFM 中位数 - R: 2, F: 2, M: 3.8
+26/05/11 13:07:00 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
++------------+----------+-----------+-------------+------------+
+|segment     |user_count|avg_recency|avg_frequency|avg_monetary|
++------------+----------+-----------+-------------+------------+
+|重要价值客户|79620     |1.26       |5.0          |7.94        |
+|一般发展客户|35410     |1.79       |1.0          |1.75        |
+|一般价值客户|33652     |1.45       |2.3          |2.72        |
+|一般挽留客户|21980     |6.49       |1.0          |1.78        |
+|重要保持客户|11063     |5.93       |3.52         |6.79        |
+|一般保持客户|8025      |6.09       |2.19         |2.66        |
+|重要发展客户|6421      |1.93       |1.0          |6.02        |
+|重要挽留客户|4682      |6.44       |1.0          |6.04        |
++------------+----------+-----------+-------------+------------+
+
+[SUCCESS] 任务 8 完成！
+  ✓ 任务8: RFM用户分群 完成
+
+[9/12] 任务9: 用户行为路径
+-------------------------------------------
+26/05/11 13:07:06 WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 10.14.12.130 instead (on interface ens33)
+26/05/11 13:07:06 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/05/11 13:07:06 INFO SparkContext: Running Spark version 3.5.0
+26/05/11 13:07:06 INFO SparkContext: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:07:06 INFO SparkContext: Java version 11.0.30
+26/05/11 13:07:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/05/11 13:07:06 INFO ResourceUtils: ==============================================================
+26/05/11 13:07:06 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/05/11 13:07:06 INFO ResourceUtils: ==============================================================
+26/05/11 13:07:06 INFO SparkContext: Submitted application: Analysis_09_UserPath
+26/05/11 13:07:06 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/05/11 13:07:06 INFO ResourceProfile: Limiting resource is cpu
+26/05/11 13:07:06 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/05/11 13:07:07 INFO SecurityManager: Changing view acls to: cty1576
+26/05/11 13:07:07 INFO SecurityManager: Changing modify acls to: cty1576
+26/05/11 13:07:07 INFO SecurityManager: Changing view acls groups to: 
+26/05/11 13:07:07 INFO SecurityManager: Changing modify acls groups to: 
+26/05/11 13:07:07 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: cty1576; groups with view permissions: EMPTY; users with modify permissions: cty1576; groups with modify permissions: EMPTY
+26/05/11 13:07:07 INFO Utils: Successfully started service 'sparkDriver' on port 41535.
+26/05/11 13:07:07 INFO SparkEnv: Registering MapOutputTracker
+26/05/11 13:07:07 INFO SparkEnv: Registering BlockManagerMaster
+26/05/11 13:07:07 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/05/11 13:07:07 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/05/11 13:07:07 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/05/11 13:07:07 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-4a2ed5ba-412e-4d81-9985-1f7e2a8ec591
+26/05/11 13:07:07 INFO MemoryStore: MemoryStore started with capacity 2.2 GiB
+26/05/11 13:07:07 INFO SparkEnv: Registering OutputCommitCoordinator
+26/05/11 13:07:07 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/05/11 13:07:07 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/05/11 13:07:07 INFO Executor: Starting executor ID driver on host 10.14.12.130
+26/05/11 13:07:07 INFO Executor: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:07:07 INFO Executor: Java version 11.0.30
+26/05/11 13:07:07 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/05/11 13:07:07 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@c776e11 for default.
+26/05/11 13:07:07 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33113.
+26/05/11 13:07:07 INFO NettyBlockTransferService: Server created on 10.14.12.130:33113
+26/05/11 13:07:07 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/05/11 13:07:07 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.14.12.130, 33113, None)
+26/05/11 13:07:07 INFO BlockManagerMasterEndpoint: Registering block manager 10.14.12.130:33113 with 2.2 GiB RAM, BlockManagerId(driver, 10.14.12.130, 33113, None)
+26/05/11 13:07:07 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.14.12.130, 33113, None)
+26/05/11 13:07:07 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.14.12.130, 33113, None)
+26/05/11 13:07:10 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+============================================================
+分析任务 9: 用户行为路径分析
+============================================================
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.util.SizeEstimator$ (file:/opt/spark-3.5.0-bin-hadoop3/jars/spark-core_2.12-3.5.0.jar) to field java.math.BigDecimal.intVal
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.util.SizeEstimator$
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
++-------------+-----------+----------+----------+
+|from_behavior|to_behavior|path_count|path_ratio|
++-------------+-----------+----------+----------+
+|buy          |pv         |432549    |74.00     |
+|buy          |buy        |106921    |18.29     |
+|buy          |cart       |31217     |5.34      |
+|buy          |fav        |13812     |2.36      |
+|cart         |pv         |1303512   |79.27     |
+|cart         |cart       |292360    |17.78     |
+|cart         |buy        |26231     |1.60      |
+|cart         |fav        |22359     |1.36      |
+|fav          |pv         |659779    |76.47     |
+|fav          |fav        |172352    |19.98     |
+|fav          |cart       |21167     |2.45      |
+|fav          |buy        |9467      |1.10      |
+|pv           |pv         |24191950  |90.96     |
+|pv           |cart       |1303702   |4.90      |
+|pv           |fav        |653262    |2.46      |
+|pv           |buy        |447467    |1.68      |
++-------------+-----------+----------+----------+
+
+26/05/11 13:07:46 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+[SUCCESS] 任务 9 完成！
+  ✓ 任务9: 用户行为路径 完成
+
+[10/12] 任务10: 24h×7d 行为热力图
+-------------------------------------------
+26/05/11 13:07:49 WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 10.14.12.130 instead (on interface ens33)
+26/05/11 13:07:49 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/05/11 13:07:50 INFO SparkContext: Running Spark version 3.5.0
+26/05/11 13:07:50 INFO SparkContext: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:07:50 INFO SparkContext: Java version 11.0.30
+26/05/11 13:07:50 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/05/11 13:07:50 INFO ResourceUtils: ==============================================================
+26/05/11 13:07:50 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/05/11 13:07:50 INFO ResourceUtils: ==============================================================
+26/05/11 13:07:50 INFO SparkContext: Submitted application: Analysis_10_HeatmapHourDow
+26/05/11 13:07:50 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/05/11 13:07:50 INFO ResourceProfile: Limiting resource is cpu
+26/05/11 13:07:50 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/05/11 13:07:50 INFO SecurityManager: Changing view acls to: cty1576
+26/05/11 13:07:50 INFO SecurityManager: Changing modify acls to: cty1576
+26/05/11 13:07:50 INFO SecurityManager: Changing view acls groups to: 
+26/05/11 13:07:50 INFO SecurityManager: Changing modify acls groups to: 
+26/05/11 13:07:50 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: cty1576; groups with view permissions: EMPTY; users with modify permissions: cty1576; groups with modify permissions: EMPTY
+26/05/11 13:07:50 INFO Utils: Successfully started service 'sparkDriver' on port 35389.
+26/05/11 13:07:50 INFO SparkEnv: Registering MapOutputTracker
+26/05/11 13:07:50 INFO SparkEnv: Registering BlockManagerMaster
+26/05/11 13:07:50 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/05/11 13:07:50 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/05/11 13:07:50 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/05/11 13:07:50 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-42002af2-34a9-42d2-9b44-e683f054dab6
+26/05/11 13:07:50 INFO MemoryStore: MemoryStore started with capacity 2.2 GiB
+26/05/11 13:07:50 INFO SparkEnv: Registering OutputCommitCoordinator
+26/05/11 13:07:50 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/05/11 13:07:50 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/05/11 13:07:51 INFO Executor: Starting executor ID driver on host 10.14.12.130
+26/05/11 13:07:51 INFO Executor: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:07:51 INFO Executor: Java version 11.0.30
+26/05/11 13:07:51 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/05/11 13:07:51 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@77266362 for default.
+26/05/11 13:07:51 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45489.
+26/05/11 13:07:51 INFO NettyBlockTransferService: Server created on 10.14.12.130:45489
+26/05/11 13:07:51 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/05/11 13:07:51 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.14.12.130, 45489, None)
+26/05/11 13:07:51 INFO BlockManagerMasterEndpoint: Registering block manager 10.14.12.130:45489 with 2.2 GiB RAM, BlockManagerId(driver, 10.14.12.130, 45489, None)
+26/05/11 13:07:51 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.14.12.130, 45489, None)
+26/05/11 13:07:51 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.14.12.130, 45489, None)
+26/05/11 13:07:54 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+============================================================
+分析任务 10: 24h × 7d 行为热力图
+============================================================
++-----------+----------+--------+---------+------------+
+|day_of_week|event_hour|pv_count|buy_count|active_users|
++-----------+----------+--------+---------+------------+
+|1          |0         |281425  |3900     |39154       |
+|1          |1         |131473  |1778     |18867       |
+|1          |2         |70129   |879      |10239       |
+|1          |3         |43829   |625      |6558        |
+|1          |4         |37348   |416      |5759        |
+|1          |5         |44439   |511      |7463        |
+|1          |6         |90850   |1029     |16308       |
+|1          |7         |191227  |2541     |34541       |
+|1          |8         |262318  |4418     |48765       |
+|1          |9         |305448  |6454     |58021       |
+|1          |10        |351406  |8686     |66907       |
+|1          |11        |347767  |8424     |68285       |
+|1          |12        |329637  |7851     |65981       |
+|1          |13        |359428  |8156     |68467       |
+|1          |14        |372166  |8464     |68805       |
+|1          |15        |385406  |8527     |69526       |
+|1          |16        |385838  |8395     |70060       |
+|1          |17        |348633  |7255     |67030       |
+|1          |18        |350197  |6818     |66371       |
+|1          |19        |433919  |8020     |74441       |
+|1          |20        |524541  |9257     |83042       |
+|1          |21        |605918  |10001    |89210       |
+|1          |22        |592856  |9381     |83018       |
+|1          |23        |439984  |6651     |59820       |
+|2          |0         |110119  |3473     |16763       |
+|2          |1         |47742   |827      |7216        |
+|2          |2         |25290   |430      |3844        |
+|2          |3         |17559   |220      |2709        |
+|2          |4         |14495   |207      |2393        |
+|2          |5         |19408   |290      |3731        |
+|2          |6         |42893   |795      |9499        |
+|2          |7         |71934   |1350     |16517       |
+|2          |8         |99057   |2178     |22212       |
+|2          |9         |127697  |3406     |27717       |
+|2          |10        |151432  |4258     |32244       |
+|2          |11        |144156  |3960     |32149       |
+|2          |12        |153070  |4018     |34544       |
+|2          |13        |165280  |4180     |34937       |
+|2          |14        |159405  |4043     |32947       |
+|2          |15        |159375  |3854     |32839       |
+|2          |16        |149025  |3579     |31874       |
+|2          |17        |136654  |3150     |30503       |
+|2          |18        |141190  |3043     |30847       |
+|2          |19        |180050  |3584     |35230       |
+|2          |20        |219442  |4269     |40364       |
+|2          |21        |254838  |4600     |43649       |
+|2          |22        |250386  |4501     |41330       |
+|2          |23        |180065  |2965     |28916       |
+|3          |0         |93216   |1488     |14948       |
+|3          |1         |41304   |685      |6583        |
++-----------+----------+--------+---------+------------+
+only showing top 50 rows
+
+26/05/11 13:08:20 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+[SUCCESS] 任务 10 完成！
+  ✓ 任务10: 24h×7d 行为热力图 完成
+
+[11/12] 任务11: 用户复购率分布
+-------------------------------------------
+26/05/11 13:08:22 WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 10.14.12.130 instead (on interface ens33)
+26/05/11 13:08:22 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/05/11 13:08:23 INFO SparkContext: Running Spark version 3.5.0
+26/05/11 13:08:23 INFO SparkContext: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:08:23 INFO SparkContext: Java version 11.0.30
+26/05/11 13:08:23 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/05/11 13:08:23 INFO ResourceUtils: ==============================================================
+26/05/11 13:08:23 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/05/11 13:08:23 INFO ResourceUtils: ==============================================================
+26/05/11 13:08:23 INFO SparkContext: Submitted application: Analysis_11_Repurchase
+26/05/11 13:08:23 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/05/11 13:08:23 INFO ResourceProfile: Limiting resource is cpu
+26/05/11 13:08:23 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/05/11 13:08:23 INFO SecurityManager: Changing view acls to: cty1576
+26/05/11 13:08:23 INFO SecurityManager: Changing modify acls to: cty1576
+26/05/11 13:08:23 INFO SecurityManager: Changing view acls groups to: 
+26/05/11 13:08:23 INFO SecurityManager: Changing modify acls groups to: 
+26/05/11 13:08:23 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: cty1576; groups with view permissions: EMPTY; users with modify permissions: cty1576; groups with modify permissions: EMPTY
+26/05/11 13:08:23 INFO Utils: Successfully started service 'sparkDriver' on port 37937.
+26/05/11 13:08:23 INFO SparkEnv: Registering MapOutputTracker
+26/05/11 13:08:23 INFO SparkEnv: Registering BlockManagerMaster
+26/05/11 13:08:23 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/05/11 13:08:23 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/05/11 13:08:23 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/05/11 13:08:23 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-a9fd7d2c-9880-4877-b8b7-92e808b6b1fb
+26/05/11 13:08:24 INFO MemoryStore: MemoryStore started with capacity 2.2 GiB
+26/05/11 13:08:24 INFO SparkEnv: Registering OutputCommitCoordinator
+26/05/11 13:08:24 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/05/11 13:08:24 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/05/11 13:08:24 INFO Executor: Starting executor ID driver on host 10.14.12.130
+26/05/11 13:08:24 INFO Executor: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:08:24 INFO Executor: Java version 11.0.30
+26/05/11 13:08:24 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/05/11 13:08:24 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@312fd592 for default.
+26/05/11 13:08:24 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35363.
+26/05/11 13:08:24 INFO NettyBlockTransferService: Server created on 10.14.12.130:35363
+26/05/11 13:08:24 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/05/11 13:08:24 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.14.12.130, 35363, None)
+26/05/11 13:08:24 INFO BlockManagerMasterEndpoint: Registering block manager 10.14.12.130:35363 with 2.2 GiB RAM, BlockManagerId(driver, 10.14.12.130, 35363, None)
+26/05/11 13:08:24 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.14.12.130, 35363, None)
+26/05/11 13:08:24 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.14.12.130, 35363, None)
+26/05/11 13:08:27 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+============================================================
+分析任务 11: 用户复购率分布
+============================================================
+26/05/11 13:08:28 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:08:28 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:08:28 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:08:28 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:08:38 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:08:38 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:08:39 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:08:39 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:08:39 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:08:39 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.util.SizeEstimator$ (file:/opt/spark-3.5.0-bin-hadoop3/jars/spark-core_2.12-3.5.0.jar) to field java.math.BigDecimal.intVal
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.util.SizeEstimator$
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+26/05/11 13:08:40 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:08:40 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
++--------------------+------------+----------+----------+---------+----------------+
+|buy_times_bucket    |bucket_order|user_count|user_ratio|total_buy|buy_contribution|
++--------------------+------------+----------+----------+---------+----------------+
+|1次（一次性买家）   |1           |68493     |34.10     |68493    |11.40           |
+|2次（首次复购）     |2           |46954     |23.38     |93908    |15.63           |
+|3-5次（活跃买家）   |3           |61088     |30.41     |225902   |37.60           |
+|6-10次（高频买家）  |4           |19778     |9.85      |143350   |23.86           |
+|11次以上（核心买家）|5           |4540      |2.26      |69198    |11.52           |
++--------------------+------------+----------+----------+---------+----------------+
+
+26/05/11 13:08:41 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:08:41 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:08:42 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+26/05/11 13:08:42 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/05/11 13:08:42 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[SUCCESS] 任务 11 完成！
+  ✓ 任务11: 用户复购率分布 完成
+
+[12/12] 任务12: TOP10类目内TOP5商品
+-------------------------------------------
+26/05/11 13:08:44 WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 10.14.12.130 instead (on interface ens33)
+26/05/11 13:08:44 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/05/11 13:08:45 INFO SparkContext: Running Spark version 3.5.0
+26/05/11 13:08:45 INFO SparkContext: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:08:45 INFO SparkContext: Java version 11.0.30
+26/05/11 13:08:45 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/05/11 13:08:45 INFO ResourceUtils: ==============================================================
+26/05/11 13:08:45 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/05/11 13:08:45 INFO ResourceUtils: ==============================================================
+26/05/11 13:08:45 INFO SparkContext: Submitted application: Analysis_12_CategoryTopItems
+26/05/11 13:08:45 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/05/11 13:08:45 INFO ResourceProfile: Limiting resource is cpu
+26/05/11 13:08:45 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/05/11 13:08:45 INFO SecurityManager: Changing view acls to: cty1576
+26/05/11 13:08:45 INFO SecurityManager: Changing modify acls to: cty1576
+26/05/11 13:08:45 INFO SecurityManager: Changing view acls groups to: 
+26/05/11 13:08:45 INFO SecurityManager: Changing modify acls groups to: 
+26/05/11 13:08:45 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: cty1576; groups with view permissions: EMPTY; users with modify permissions: cty1576; groups with modify permissions: EMPTY
+26/05/11 13:08:45 INFO Utils: Successfully started service 'sparkDriver' on port 35807.
+26/05/11 13:08:45 INFO SparkEnv: Registering MapOutputTracker
+26/05/11 13:08:45 INFO SparkEnv: Registering BlockManagerMaster
+26/05/11 13:08:45 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/05/11 13:08:45 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/05/11 13:08:45 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/05/11 13:08:45 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-fd52d266-8ef4-4afa-9aea-181c9fdfd01c
+26/05/11 13:08:45 INFO MemoryStore: MemoryStore started with capacity 2.2 GiB
+26/05/11 13:08:45 INFO SparkEnv: Registering OutputCommitCoordinator
+26/05/11 13:08:45 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/05/11 13:08:45 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/05/11 13:08:45 INFO Executor: Starting executor ID driver on host 10.14.12.130
+26/05/11 13:08:45 INFO Executor: OS info Linux, 6.8.0-111-generic, amd64
+26/05/11 13:08:45 INFO Executor: Java version 11.0.30
+26/05/11 13:08:45 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/05/11 13:08:45 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@1743619c for default.
+26/05/11 13:08:45 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35469.
+26/05/11 13:08:45 INFO NettyBlockTransferService: Server created on 10.14.12.130:35469
+26/05/11 13:08:45 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/05/11 13:08:45 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.14.12.130, 35469, None)
+26/05/11 13:08:45 INFO BlockManagerMasterEndpoint: Registering block manager 10.14.12.130:35469 with 2.2 GiB RAM, BlockManagerId(driver, 10.14.12.130, 35469, None)
+26/05/11 13:08:45 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.14.12.130, 35469, None)
+26/05/11 13:08:45 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.14.12.130, 35469, None)
+26/05/11 13:08:48 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+============================================================
+分析任务 12: TOP10 类目内 TOP5 商品
+============================================================
++-----------+-----------+-------+-------+--------+----------------+
+|category_id|category_pv|item_id|item_pv|item_buy|rank_in_category|
++-----------+-----------+-------+-------+--------+----------------+
+|4756105    |1369859    |812879 |9083   |40      |1               |
+|4756105    |1369859    |4211339|5196   |22      |2               |
+|4756105    |1369859    |4649427|4747   |15      |3               |
+|4756105    |1369859    |3920968|3777   |23      |4               |
+|4756105    |1369859    |2364679|3614   |24      |5               |
+|4145813    |957987     |2828948|3019   |20      |1               |
+|4145813    |957987     |232919 |1994   |54      |2               |
+|4145813    |957987     |3114069|1955   |19      |3               |
+|4145813    |957987     |3858178|1646   |15      |4               |
+|4145813    |957987     |2732505|1570   |23      |5               |
+|2355072    |942504     |987143 |4774   |14      |1               |
+|2355072    |942504     |3520504|4081   |34      |2               |
+|2355072    |942504     |640975 |4009   |22      |3               |
+|2355072    |942504     |393880 |2878   |29      |4               |
+|2355072    |942504     |4793966|2284   |4       |5               |
+|3607361    |885238     |3845720|7797   |33      |1               |
+|3607361    |885238     |138964 |6358   |31      |2               |
+|3607361    |885238     |2331370|5909   |38      |3               |
+|3607361    |885238     |2338453|5086   |54      |4               |
+|3607361    |885238     |4091349|3516   |26      |5               |
+|982926     |844666     |2818406|4708   |27      |1               |
+|982926     |844666     |3077270|2939   |21      |2               |
+|982926     |844666     |1541734|2810   |13      |3               |
+|982926     |844666     |1402604|2715   |74      |4               |
+|982926     |844666     |5057288|2529   |51      |5               |
+|2520377    |607148     |2319849|2231   |7       |1               |
+|2520377    |607148     |1234475|1515   |9       |2               |
+|2520377    |607148     |1848520|1382   |10      |3               |
+|2520377    |607148     |1282510|1340   |1       |4               |
+|2520377    |607148     |250120 |1327   |0       |5               |
+|4801426    |562879     |1583704|4422   |40      |1               |
+|4801426    |562879     |3563468|3527   |27      |2               |
+|4801426    |562879     |2521928|2786   |44      |3               |
+|4801426    |562879     |4946821|2353   |32      |4               |
+|4801426    |562879     |3244134|2336   |72      |5               |
+|1320293    |534990     |1591862|4889   |0       |1               |
+|1320293    |534990     |395399 |2509   |44      |2               |
+|1320293    |534990     |4637129|2052   |7       |3               |
+|1320293    |534990     |587994 |1999   |9       |4               |
+|1320293    |534990     |3935628|1937   |13      |5               |
+|2465336    |456828     |866111 |2625   |24      |1               |
+|2465336    |456828     |3148330|1507   |17      |2               |
+|2465336    |456828     |779670 |1425   |15      |3               |
+|2465336    |456828     |2466347|1143   |10      |4               |
+|2465336    |456828     |4390212|1058   |5       |5               |
+|3002561    |429431     |1913065|1883   |4       |1               |
+|3002561    |429431     |5083191|1834   |21      |2               |
+|3002561    |429431     |3074497|1669   |26      |3               |
+|3002561    |429431     |247914 |1518   |14      |4               |
+|3002561    |429431     |3981393|1280   |23      |5               |
++-----------+-----------+-------+-------+--------+----------------+
+
+26/05/11 13:09:07 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+[SUCCESS] 任务 12 完成！
+  ✓ 任务12: TOP10类目内TOP5商品 完成
+
+============================================================
+  [SUCCESS] 全部 12 个分析任务完成！
+  CSV 结果文件: /home/cty1576/bigdatacty/output/csv/
+  Hive ADS 表:  hive -e 'SHOW TABLES IN ads;'
+============================================================
+total 76
+drwxrwxr-x 2 cty1576 cty1576  4096  5月 11 13:09 .
+drwxrwxr-x 4 cty1576 cty1576  4096  5月 11 12:53 ..
+-rw-rw-r-- 1 cty1576 cty1576   395  5月 11 13:03 01_daily_pv_uv.csv
+-rw-rw-r-- 1 cty1576 cty1576   727  5月 11 13:04 02_hourly_distribution.csv
+-rw-rw-r-- 1 cty1576 cty1576   164  5月 11 13:04 03_behavior_funnel.csv
+-rw-rw-r-- 1 cty1576 cty1576  3168  5月 11 13:05 04_top_items.csv
+-rw-rw-r-- 1 cty1576 cty1576   644  5月 11 13:05 05_top_categories.csv
+-rw-rw-r-- 1 cty1576 cty1576   306  5月 11 13:05 06_weekday_vs_weekend.csv
+-rw-rw-r-- 1 cty1576 cty1576   307  5月 11 13:06 07_retention.csv
+-rw-rw-r-- 1 cty1576 cty1576 19037  5月 11 13:07 08_rfm_detail.csv
+-rw-rw-r-- 1 cty1576 cty1576   369  5月 11 13:07 08_rfm_summary.csv
+-rw-rw-r-- 1 cty1576 cty1576   372  5月 11 13:07 09_user_path.csv
+-rw-rw-r-- 1 cty1576 cty1576  3725  5月 11 13:08 10_heatmap_hour_dow.csv
+-rw-rw-r-- 1 cty1576 cty1576   338  5月 11 13:08 11_repurchase.csv
+-rw-rw-r-- 1 cty1576 cty1576  1694  5月 11 13:09 12_category_top_items.csv
+-rw-rw-r-- 1 cty1576 cty1576     0  5月 11 12:53 .gitkeep

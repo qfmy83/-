@@ -1,0 +1,21 @@
+[LOG] 本次日志: /home/cty1576/bigdatacty1/logs/pipeline/stop_all_services_20260610_001000.log
+============================================================
+  停止所有大数据服务
+============================================================
+[1/4] 停止 Hive...
+  ✓ Hive 已停止
+[2/4] 停止 Kafka...
+  ✓ Kafka 已停止
+[3/4] 停止 Zookeeper...
+  ✓ Zookeeper 已停止
+[4/4] 停止 Hadoop...
+Stopping nodemanagers
+Stopping resourcemanager
+Stopping namenodes on [localhost]
+Stopping datanodes
+Stopping secondary namenodes [ubuntu]
+  ✓ Hadoop 已停止
+
+当前 Java 进程:
+34487 Jps
+============================================================

@@ -1,0 +1,371 @@
+[LOG] 本次日志: /home/cty1576/bigdatacty1/logs/pipeline/04_run_kafka_demo_streaming_20260610_001358.log
+[INFO] 启动 Spark Structured Streaming...
+26/06/10 00:14:01 WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 10.14.12.130 instead (on interface ens33)
+26/06/10 00:14:01 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+:: loading settings :: url = jar:file:/opt/spark-3.5.0-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /home/cty1576/.ivy2/cache
+The jars for the packages stored in: /home/cty1576/.ivy2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-bd8343e7-624d-4159-8c59-8161d36ff20f;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.0 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.0 in central
+	found org.apache.kafka#kafka-clients;3.4.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.3 in central
+	found org.slf4j#slf4j-api;2.0.7 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+:: resolution report :: resolve 979ms :: artifacts dl 34ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.0 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.0 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.7 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   11  |   0   |   0   |   0   ||   11  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-bd8343e7-624d-4159-8c59-8161d36ff20f
+	confs: [default]
+	0 artifacts copied, 11 already retrieved (0kB/18ms)
+26/06/10 00:14:03 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/06/10 00:14:05 INFO SparkContext: Running Spark version 3.5.0
+26/06/10 00:14:05 INFO SparkContext: OS info Linux, 6.8.0-111-generic, amd64
+26/06/10 00:14:05 INFO SparkContext: Java version 11.0.30
+26/06/10 00:14:05 INFO ResourceUtils: ==============================================================
+26/06/10 00:14:05 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/06/10 00:14:05 INFO ResourceUtils: ==============================================================
+26/06/10 00:14:05 INFO SparkContext: Submitted application: KafkaSparkStreamingRealtimePV
+26/06/10 00:14:05 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/06/10 00:14:05 INFO ResourceProfile: Limiting resource is cpu
+26/06/10 00:14:05 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/06/10 00:14:05 INFO SecurityManager: Changing view acls to: cty1576
+26/06/10 00:14:05 INFO SecurityManager: Changing modify acls to: cty1576
+26/06/10 00:14:05 INFO SecurityManager: Changing view acls groups to: 
+26/06/10 00:14:05 INFO SecurityManager: Changing modify acls groups to: 
+26/06/10 00:14:05 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: cty1576; groups with view permissions: EMPTY; users with modify permissions: cty1576; groups with modify permissions: EMPTY
+26/06/10 00:14:06 INFO Utils: Successfully started service 'sparkDriver' on port 41133.
+26/06/10 00:14:06 INFO SparkEnv: Registering MapOutputTracker
+26/06/10 00:14:06 INFO SparkEnv: Registering BlockManagerMaster
+26/06/10 00:14:06 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/06/10 00:14:06 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/06/10 00:14:06 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/06/10 00:14:06 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-143ec8a0-1eff-4b7e-a43b-c129825ac60b
+26/06/10 00:14:06 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+26/06/10 00:14:06 INFO SparkEnv: Registering OutputCommitCoordinator
+26/06/10 00:14:06 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/06/10 00:14:06 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+26/06/10 00:14:06 INFO Utils: Successfully started service 'SparkUI' on port 4041.
+26/06/10 00:14:07 INFO SparkContext: Added JAR file:///home/cty1576/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar at spark://10.14.12.130:41133/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO SparkContext: Added JAR file:///home/cty1576/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar at spark://10.14.12.130:41133/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO SparkContext: Added JAR file:///home/cty1576/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at spark://10.14.12.130:41133/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO SparkContext: Added JAR file:///home/cty1576/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://10.14.12.130:41133/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO SparkContext: Added JAR file:///home/cty1576/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://10.14.12.130:41133/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO SparkContext: Added JAR file:///home/cty1576/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at spark://10.14.12.130:41133/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO SparkContext: Added JAR file:///home/cty1576/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://10.14.12.130:41133/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO SparkContext: Added JAR file:///home/cty1576/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar at spark://10.14.12.130:41133/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO SparkContext: Added JAR file:///home/cty1576/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at spark://10.14.12.130:41133/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO SparkContext: Added JAR file:///home/cty1576/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at spark://10.14.12.130:41133/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO SparkContext: Added JAR file:///home/cty1576/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://10.14.12.130:41133/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO SparkContext: Added file file:///home/cty1576/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar at file:///home/cty1576/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: Copying /home/cty1576/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar
+26/06/10 00:14:07 INFO SparkContext: Added file file:///home/cty1576/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar at file:///home/cty1576/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: Copying /home/cty1576/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar
+26/06/10 00:14:07 INFO SparkContext: Added file file:///home/cty1576/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at file:///home/cty1576/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: Copying /home/cty1576/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.kafka_kafka-clients-3.4.1.jar
+26/06/10 00:14:07 INFO SparkContext: Added file file:///home/cty1576/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at file:///home/cty1576/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: Copying /home/cty1576/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/com.google.code.findbugs_jsr305-3.0.0.jar
+26/06/10 00:14:07 INFO SparkContext: Added file file:///home/cty1576/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at file:///home/cty1576/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: Copying /home/cty1576/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.commons_commons-pool2-2.11.1.jar
+26/06/10 00:14:07 INFO SparkContext: Added file file:///home/cty1576/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at file:///home/cty1576/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: Copying /home/cty1576/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+26/06/10 00:14:07 INFO SparkContext: Added file file:///home/cty1576/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at file:///home/cty1576/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: Copying /home/cty1576/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.lz4_lz4-java-1.8.0.jar
+26/06/10 00:14:07 INFO SparkContext: Added file file:///home/cty1576/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar at file:///home/cty1576/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: Copying /home/cty1576/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.xerial.snappy_snappy-java-1.1.10.3.jar
+26/06/10 00:14:07 INFO SparkContext: Added file file:///home/cty1576/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at file:///home/cty1576/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: Copying /home/cty1576/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.slf4j_slf4j-api-2.0.7.jar
+26/06/10 00:14:07 INFO SparkContext: Added file file:///home/cty1576/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at file:///home/cty1576/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: Copying /home/cty1576/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+26/06/10 00:14:07 INFO SparkContext: Added file file:///home/cty1576/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at file:///home/cty1576/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: Copying /home/cty1576/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/commons-logging_commons-logging-1.1.3.jar
+26/06/10 00:14:07 INFO Executor: Starting executor ID driver on host 10.14.12.130
+26/06/10 00:14:07 INFO Executor: OS info Linux, 6.8.0-111-generic, amd64
+26/06/10 00:14:07 INFO Executor: Java version 11.0.30
+26/06/10 00:14:07 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/06/10 00:14:07 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@16622829 for default.
+26/06/10 00:14:07 INFO Executor: Fetching file:///home/cty1576/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: /home/cty1576/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.xerial.snappy_snappy-java-1.1.10.3.jar
+26/06/10 00:14:07 INFO Executor: Fetching file:///home/cty1576/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: /home/cty1576/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+26/06/10 00:14:07 INFO Executor: Fetching file:///home/cty1576/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: /home/cty1576/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.lz4_lz4-java-1.8.0.jar
+26/06/10 00:14:07 INFO Executor: Fetching file:///home/cty1576/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: /home/cty1576/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar
+26/06/10 00:14:07 INFO Executor: Fetching file:///home/cty1576/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: /home/cty1576/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar
+26/06/10 00:14:07 INFO Executor: Fetching file:///home/cty1576/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: /home/cty1576/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.slf4j_slf4j-api-2.0.7.jar
+26/06/10 00:14:07 INFO Executor: Fetching file:///home/cty1576/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: /home/cty1576/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.commons_commons-pool2-2.11.1.jar
+26/06/10 00:14:07 INFO Executor: Fetching file:///home/cty1576/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: /home/cty1576/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+26/06/10 00:14:07 INFO Executor: Fetching file:///home/cty1576/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: /home/cty1576/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/commons-logging_commons-logging-1.1.3.jar
+26/06/10 00:14:07 INFO Executor: Fetching file:///home/cty1576/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: /home/cty1576/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.kafka_kafka-clients-3.4.1.jar
+26/06/10 00:14:07 INFO Executor: Fetching file:///home/cty1576/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: /home/cty1576/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/com.google.code.findbugs_jsr305-3.0.0.jar
+26/06/10 00:14:07 INFO Executor: Fetching spark://10.14.12.130:41133/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO TransportClientFactory: Successfully created connection to /10.14.12.130:41133 after 60 ms (0 ms spent in bootstraps)
+26/06/10 00:14:07 INFO Utils: Fetching spark://10.14.12.130:41133/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp6852203735896541685.tmp
+26/06/10 00:14:07 INFO Utils: /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp6852203735896541685.tmp has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar
+26/06/10 00:14:07 INFO Executor: Adding file:/tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar to class loader default
+26/06/10 00:14:07 INFO Executor: Fetching spark://10.14.12.130:41133/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: Fetching spark://10.14.12.130:41133/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp552509381539007987.tmp
+26/06/10 00:14:07 INFO Utils: /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp552509381539007987.tmp has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.commons_commons-pool2-2.11.1.jar
+26/06/10 00:14:07 INFO Executor: Adding file:/tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.commons_commons-pool2-2.11.1.jar to class loader default
+26/06/10 00:14:07 INFO Executor: Fetching spark://10.14.12.130:41133/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1781021645310
+26/06/10 00:14:07 INFO Utils: Fetching spark://10.14.12.130:41133/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp18177281605459770440.tmp
+26/06/10 00:14:08 INFO Utils: /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp18177281605459770440.tmp has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.lz4_lz4-java-1.8.0.jar
+26/06/10 00:14:08 INFO Executor: Adding file:/tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.lz4_lz4-java-1.8.0.jar to class loader default
+26/06/10 00:14:08 INFO Executor: Fetching spark://10.14.12.130:41133/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar with timestamp 1781021645310
+26/06/10 00:14:08 INFO Utils: Fetching spark://10.14.12.130:41133/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp209940441886490362.tmp
+26/06/10 00:14:08 INFO Utils: /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp209940441886490362.tmp has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar
+26/06/10 00:14:08 INFO Executor: Adding file:/tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar to class loader default
+26/06/10 00:14:08 INFO Executor: Fetching spark://10.14.12.130:41133/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1781021645310
+26/06/10 00:14:08 INFO Utils: Fetching spark://10.14.12.130:41133/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp15774074125105815486.tmp
+26/06/10 00:14:08 INFO Utils: /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp15774074125105815486.tmp has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+26/06/10 00:14:08 INFO Executor: Adding file:/tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to class loader default
+26/06/10 00:14:08 INFO Executor: Fetching spark://10.14.12.130:41133/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1781021645310
+26/06/10 00:14:08 INFO Utils: Fetching spark://10.14.12.130:41133/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp1156564115026508736.tmp
+26/06/10 00:14:08 INFO Utils: /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp1156564115026508736.tmp has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/com.google.code.findbugs_jsr305-3.0.0.jar
+26/06/10 00:14:08 INFO Executor: Adding file:/tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/com.google.code.findbugs_jsr305-3.0.0.jar to class loader default
+26/06/10 00:14:08 INFO Executor: Fetching spark://10.14.12.130:41133/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1781021645310
+26/06/10 00:14:08 INFO Utils: Fetching spark://10.14.12.130:41133/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp10189044252885915538.tmp
+26/06/10 00:14:08 INFO Utils: /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp10189044252885915538.tmp has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/commons-logging_commons-logging-1.1.3.jar
+26/06/10 00:14:08 INFO Executor: Adding file:/tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/commons-logging_commons-logging-1.1.3.jar to class loader default
+26/06/10 00:14:08 INFO Executor: Fetching spark://10.14.12.130:41133/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1781021645310
+26/06/10 00:14:08 INFO Utils: Fetching spark://10.14.12.130:41133/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp16695027087596975122.tmp
+26/06/10 00:14:08 INFO Utils: /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp16695027087596975122.tmp has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.xerial.snappy_snappy-java-1.1.10.3.jar
+26/06/10 00:14:08 INFO Executor: Adding file:/tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.xerial.snappy_snappy-java-1.1.10.3.jar to class loader default
+26/06/10 00:14:08 INFO Executor: Fetching spark://10.14.12.130:41133/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1781021645310
+26/06/10 00:14:08 INFO Utils: Fetching spark://10.14.12.130:41133/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp18424926003240104513.tmp
+26/06/10 00:14:08 INFO Utils: /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp18424926003240104513.tmp has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+26/06/10 00:14:08 INFO Executor: Adding file:/tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.hadoop_hadoop-client-api-3.3.4.jar to class loader default
+26/06/10 00:14:08 INFO Executor: Fetching spark://10.14.12.130:41133/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1781021645310
+26/06/10 00:14:08 INFO Utils: Fetching spark://10.14.12.130:41133/jars/org.slf4j_slf4j-api-2.0.7.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp13174705497797742503.tmp
+26/06/10 00:14:08 INFO Utils: /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp13174705497797742503.tmp has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.slf4j_slf4j-api-2.0.7.jar
+26/06/10 00:14:08 INFO Executor: Adding file:/tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.slf4j_slf4j-api-2.0.7.jar to class loader default
+26/06/10 00:14:08 INFO Executor: Fetching spark://10.14.12.130:41133/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1781021645310
+26/06/10 00:14:08 INFO Utils: Fetching spark://10.14.12.130:41133/jars/org.apache.kafka_kafka-clients-3.4.1.jar to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp789830039036234724.tmp
+26/06/10 00:14:08 INFO Utils: /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/fetchFileTemp789830039036234724.tmp has been previously copied to /tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.kafka_kafka-clients-3.4.1.jar
+26/06/10 00:14:08 INFO Executor: Adding file:/tmp/spark-e46f8292-0d10-4ca6-8f1d-f7b30430a771/userFiles-8c3e5434-cd56-4b72-bb86-15590370425b/org.apache.kafka_kafka-clients-3.4.1.jar to class loader default
+26/06/10 00:14:08 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45033.
+26/06/10 00:14:08 INFO NettyBlockTransferService: Server created on 10.14.12.130:45033
+26/06/10 00:14:08 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/06/10 00:14:08 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.14.12.130, 45033, None)
+26/06/10 00:14:08 INFO BlockManagerMasterEndpoint: Registering block manager 10.14.12.130:45033 with 434.4 MiB RAM, BlockManagerId(driver, 10.14.12.130, 45033, None)
+26/06/10 00:14:08 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.14.12.130, 45033, None)
+26/06/10 00:14:08 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.14.12.130, 45033, None)
+============================================================
+Spark Structured Streaming: realtime PV/UV stats
+============================================================
+[INFO] Streaming query started. Waiting for Kafka data...
+[INFO] Checkpoint: /home/cty1576/bigdatacty1/logs/streaming_checkpoint/pv_uv
+[INFO] UV uses approximate distinct count for streaming compatibility.
+[INFO] Start the producer in another terminal.
+[INFO] Press Ctrl+C to stop.
+26/06/10 00:14:16 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+26/06/10 00:14:19 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++------------+----------+--------+-----+------------+
+|window_start|window_end|behavior|count|unique_users|
++------------+----------+--------+-----+------------+
++------------+----------+--------+-----+------------+
+
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++-------------------+-------------------+--------+-----+------------+
+|window_start       |window_end         |behavior|count|unique_users|
++-------------------+-------------------+--------+-----+------------+
+|2017-11-25 09:21:10|2017-11-25 09:21:40|pv      |1    |1           |
+|2017-11-25 15:04:50|2017-11-25 15:05:20|pv      |1    |1           |
+|2017-11-25 15:04:30|2017-11-25 15:05:00|pv      |1    |1           |
+|2017-11-25 15:48:50|2017-11-25 15:49:20|pv      |1    |1           |
+|2017-11-25 21:27:50|2017-11-25 21:28:20|pv      |1    |1           |
+|2017-11-26 05:22:00|2017-11-26 05:22:30|pv      |1    |1           |
+|2017-11-27 08:11:00|2017-11-27 08:11:30|pv      |1    |1           |
+|2017-11-27 10:46:40|2017-11-27 10:47:10|pv      |3    |3           |
+|2017-11-28 12:44:30|2017-11-28 12:45:00|pv      |1    |1           |
+|2017-11-28 15:54:20|2017-11-28 15:54:50|pv      |1    |1           |
+|2017-11-28 15:54:10|2017-11-28 15:54:40|pv      |1    |1           |
+|2017-11-28 20:07:20|2017-11-28 20:07:50|pv      |1    |1           |
+|2017-11-28 23:55:30|2017-11-28 23:56:00|pv      |2    |2           |
+|2017-11-29 02:12:40|2017-11-29 02:13:10|pv      |1    |1           |
+|2017-11-29 06:54:20|2017-11-29 06:54:50|pv      |1    |1           |
+|2017-11-29 06:54:10|2017-11-29 06:54:40|pv      |1    |1           |
+|2017-11-29 07:03:40|2017-11-29 07:04:10|pv      |1    |1           |
+|2017-11-29 15:07:00|2017-11-29 15:07:30|pv      |1    |1           |
+|2017-11-29 15:35:50|2017-11-29 15:36:20|pv      |1    |1           |
+|2017-11-29 23:29:10|2017-11-29 23:29:40|pv      |1    |1           |
+|2017-11-29 23:29:00|2017-11-29 23:29:30|pv      |1    |1           |
+|2017-11-30 19:27:30|2017-11-30 19:28:00|pv      |2    |2           |
+|2017-11-30 20:29:00|2017-11-30 20:29:30|pv      |1    |1           |
+|2017-11-30 21:43:50|2017-11-30 21:44:20|pv      |2    |2           |
+|2017-12-01 00:37:10|2017-12-01 00:37:40|pv      |1    |1           |
+|2017-12-02 07:58:40|2017-12-02 07:59:10|pv      |1    |1           |
+|2017-12-02 12:47:00|2017-12-02 12:47:30|pv      |1    |1           |
+|2017-12-02 22:17:20|2017-12-02 22:17:50|pv      |2    |2           |
+|2017-12-03 05:51:40|2017-12-03 05:52:10|pv      |1    |1           |
+|2017-12-03 10:35:00|2017-12-03 10:35:30|pv      |1    |1           |
+|2017-12-03 11:43:10|2017-12-03 11:43:40|pv      |1    |1           |
+|2017-11-25 03:08:20|2017-11-25 03:08:50|pv      |1    |1           |
+|2017-11-25 03:08:10|2017-11-25 03:08:40|pv      |1    |1           |
+|2017-11-25 03:10:00|2017-11-25 03:10:30|pv      |1    |1           |
+|2017-11-25 03:14:40|2017-11-25 03:15:10|pv      |2    |1           |
+|2017-11-25 03:23:50|2017-11-25 03:24:20|pv      |2    |1           |
+|2017-11-25 03:26:50|2017-11-25 03:27:20|pv      |1    |1           |
+|2017-11-25 03:26:30|2017-11-25 03:27:00|pv      |1    |1           |
+|2017-11-25 03:30:40|2017-11-25 03:31:10|fav     |1    |1           |
+|2017-11-25 03:39:00|2017-11-25 03:39:30|pv      |1    |1           |
+|2017-11-25 03:38:50|2017-11-25 03:39:20|pv      |1    |1           |
+|2017-11-25 06:46:30|2017-11-25 06:47:00|pv      |1    |1           |
+|2017-11-25 06:50:30|2017-11-25 06:51:00|fav     |1    |1           |
+|2017-11-25 06:50:10|2017-11-25 06:50:40|fav     |1    |1           |
+|2017-11-25 07:13:40|2017-11-25 07:14:10|fav     |1    |1           |
+|2017-11-25 11:18:00|2017-11-25 11:18:30|buy     |1    |1           |
+|2017-11-25 11:56:00|2017-11-25 11:56:30|pv      |1    |1           |
+|2017-11-25 11:55:50|2017-11-25 11:56:20|pv      |1    |1           |
+|2017-11-26 15:15:10|2017-11-26 15:15:40|pv      |1    |1           |
+|2017-11-26 15:15:00|2017-11-26 15:15:30|pv      |1    |1           |
++-------------------+-------------------+--------+-----+------------+
+only showing top 50 rows
+
+26/06/10 00:14:52 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 10000 milliseconds, but spent 12008 milliseconds
+-------------------------------------------
+Batch: 2
+-------------------------------------------
++-------------------+-------------------+--------+-----+------------+
+|window_start       |window_end         |behavior|count|unique_users|
++-------------------+-------------------+--------+-----+------------+
+|2017-11-25 11:01:40|2017-11-25 11:02:10|pv      |1    |1           |
+|2017-11-25 13:41:20|2017-11-25 13:41:50|pv      |1    |1           |
+|2017-11-25 13:43:10|2017-11-25 13:43:40|pv      |1    |1           |
+|2017-11-25 13:42:50|2017-11-25 13:43:20|pv      |1    |1           |
+|2017-11-25 13:45:50|2017-11-25 13:46:20|pv      |1    |1           |
+|2017-11-25 13:46:20|2017-11-25 13:46:50|pv      |1    |1           |
+|2017-11-25 13:46:50|2017-11-25 13:47:20|pv      |1    |1           |
+|2017-11-25 13:47:50|2017-11-25 13:48:20|pv      |2    |1           |
+|2017-11-25 13:47:40|2017-11-25 13:48:10|pv      |2    |1           |
+|2017-11-25 13:51:00|2017-11-25 13:51:30|pv      |1    |1           |
+|2017-11-26 09:49:30|2017-11-26 09:50:00|pv      |3    |3           |
+|2017-11-26 09:53:20|2017-11-26 09:53:50|pv      |3    |3           |
+|2017-11-26 09:58:50|2017-11-26 09:59:20|buy     |1    |1           |
+|2017-11-26 19:50:40|2017-11-26 19:51:10|cart    |1    |1           |
+|2017-11-26 19:50:20|2017-11-26 19:50:50|cart    |1    |1           |
+|2017-11-26 19:59:50|2017-11-26 20:00:20|pv      |3    |2           |
+|2017-11-26 20:01:10|2017-11-26 20:01:40|pv      |3    |3           |
+|2017-11-26 20:01:00|2017-11-26 20:01:30|pv      |3    |3           |
+|2017-11-26 20:09:30|2017-11-26 20:10:00|pv      |2    |1           |
+|2017-11-26 20:10:30|2017-11-26 20:11:00|pv      |2    |1           |
+|2017-11-26 22:01:30|2017-11-26 22:02:00|pv      |3    |3           |
+|2017-11-26 22:03:20|2017-11-26 22:03:50|pv      |2    |2           |
+|2017-11-26 22:11:20|2017-11-26 22:11:50|pv      |3    |3           |
+|2017-11-27 14:02:10|2017-11-27 14:02:40|pv      |1    |1           |
+|2017-11-27 14:02:00|2017-11-27 14:02:30|pv      |1    |1           |
+|2017-11-27 15:29:00|2017-11-27 15:29:30|pv      |1    |1           |
+|2017-11-27 15:28:50|2017-11-27 15:29:20|pv      |1    |1           |
+|2017-11-27 19:00:30|2017-11-27 19:01:00|pv      |1    |1           |
+|2017-11-27 19:08:00|2017-11-27 19:08:30|pv      |1    |1           |
+|2017-11-27 19:08:20|2017-11-27 19:08:50|pv      |1    |1           |
+|2017-11-27 19:09:10|2017-11-27 19:09:40|pv      |3    |2           |
+|2017-11-27 20:25:00|2017-11-27 20:25:30|pv      |1    |1           |
+|2017-11-27 20:24:50|2017-11-27 20:25:20|pv      |2    |2           |
+|2017-11-27 20:28:00|2017-11-27 20:28:30|pv      |1    |1           |
+|2017-11-27 20:29:00|2017-11-27 20:29:30|cart    |1    |1           |
+|2017-11-27 20:29:30|2017-11-27 20:30:00|pv      |2    |2           |
+|2017-11-27 20:29:20|2017-11-27 20:29:50|pv      |2    |2           |
+|2017-11-27 20:30:00|2017-11-27 20:30:30|pv      |1    |1           |
+|2017-11-27 20:31:30|2017-11-27 20:32:00|pv      |1    |1           |
+|2017-11-27 20:32:10|2017-11-27 20:32:40|pv      |2    |2           |
+|2017-11-27 20:33:40|2017-11-27 20:34:10|pv      |1    |1           |
+|2017-11-27 20:34:50|2017-11-27 20:35:20|pv      |1    |1           |
+|2017-11-27 20:34:40|2017-11-27 20:35:10|pv      |1    |1           |
+|2017-11-27 20:42:50|2017-11-27 20:43:20|pv      |1    |1           |
+|2017-11-27 20:43:50|2017-11-27 20:44:20|pv      |2    |2           |
+|2017-11-27 20:47:00|2017-11-27 20:47:30|pv      |2    |2           |
+|2017-11-27 21:26:50|2017-11-27 21:27:20|pv      |1    |1           |
+|2017-11-28 07:44:10|2017-11-28 07:44:40|pv      |2    |2           |
+|2017-11-28 07:44:00|2017-11-28 07:44:30|pv      |1    |1           |
+|2017-11-28 07:45:20|2017-11-28 07:45:50|pv      |2    |2           |
++-------------------+-------------------+--------+-----+------------+
+only showing top 50 rows
+
+-------------------------------------------
+Batch: 3
+-------------------------------------------
++-------------------+-------------------+--------+-----+------------+
+|window_start       |window_end         |behavior|count|unique_users|
++-------------------+-------------------+--------+-----+------------+
+|2017-12-03 23:59:00|2017-12-03 23:59:30|pv      |4    |4           |
+|2017-12-03 23:58:50|2017-12-03 23:59:20|pv      |4    |4           |
+|2017-12-03 23:58:40|2017-12-03 23:59:10|pv      |2    |2           |
++-------------------+-------------------+--------+-----+------------+
+
+-------------------------------------------
+Batch: 4
+-------------------------------------------
++-------------------+-------------------+--------+-----+------------+
+|window_start       |window_end         |behavior|count|unique_users|
++-------------------+-------------------+--------+-----+------------+
+|2017-12-03 23:58:30|2017-12-03 23:59:00|pv      |1    |1           |
+|2017-12-03 23:58:50|2017-12-03 23:59:20|pv      |5    |5           |
+|2017-12-03 23:58:40|2017-12-03 23:59:10|pv      |3    |3           |
++-------------------+-------------------+--------+-----+------------+
+
+-------------------------------------------
+Batch: 5
+-------------------------------------------
++-------------------+-------------------+--------+-----+------------+
+|window_start       |window_end         |behavior|count|unique_users|
++-------------------+-------------------+--------+-----+------------+
+|2017-12-03 23:58:30|2017-12-03 23:59:00|pv      |2    |2           |
+|2017-12-03 23:58:20|2017-12-03 23:58:50|pv      |1    |1           |
++-------------------+-------------------+--------+-----+------------+
+
+-------------------------------------------
+Batch: 6
+-------------------------------------------
++-------------------+-------------------+--------+-----+------------+
+|window_start       |window_end         |behavior|count|unique_users|
++-------------------+-------------------+--------+-----+------------+
+|2017-12-03 23:59:10|2017-12-03 23:59:40|pv      |3    |3           |
+|2017-12-03 23:59:00|2017-12-03 23:59:30|pv      |5    |5           |
+|2017-12-03 23:59:20|2017-12-03 23:59:50|pv      |1    |1           |
++-------------------+-------------------+--------+-----+------------+
+
+-------------------------------------------
+Batch: 7
+-------------------------------------------
++------------+----------+--------+-----+------------+
+|window_start|window_end|behavior|count|unique_users|
++------------+----------+--------+-----+------------+
++------------+----------+--------+-----+------------+
+

@@ -1,0 +1,69 @@
+[LOG] 本次日志: /home/cty1576/bigdatacty1/logs/pipeline/05_run_visualization_20260610_002944.log
+============================================================
+  步骤 5: 生成数据可视化
+============================================================
+============================================================
+数据可视化生成
+============================================================
+
+[INFO] 正在构建综合仪表盘...
+[1/10] 每日 PV/UV 趋势...
+  → 已保存: /home/cty1576/bigdatacty1/output/html/01_daily_pv_uv.html
+[2/10] 24小时活跃分布...
+  → 已保存: /home/cty1576/bigdatacty1/output/html/02_hourly_distribution.html
+[3/10] 用户行为转化漏斗...
+  → 已保存: /home/cty1576/bigdatacty1/output/html/03_behavior_funnel.html
+[4/10] TOP20 热门商品...
+  → 已保存: /home/cty1576/bigdatacty1/output/html/04_top_items.html
+[5/10] TOP20 热门类目...
+  → 已保存: /home/cty1576/bigdatacty1/output/html/05_top_categories.html
+[6/10] 工作日 vs 周末对比...
+  → 已保存: /home/cty1576/bigdatacty1/output/html/06_weekday_weekend.html
+[7/10] 用户留存率...
+  → 已保存: /home/cty1576/bigdatacty1/output/html/07_retention.html
+[8/10] RFM 用户分群...
+  → 已保存: /home/cty1576/bigdatacty1/output/html/08_rfm.html
+[9/10] 用户行为路径(桑基图)...
+  → 已保存: /home/cty1576/bigdatacty1/output/html/09_user_path.html
+[10/10] 类目浏览量vs转化率(散点图)...
+  → 已保存: /home/cty1576/bigdatacty1/output/html/10_category_conversion.html
+[11/13] 24h × 7d 行为热力图...
+  → 已保存: /home/cty1576/bigdatacty1/output/html/11_heatmap_hour_dow.html
+[12/13] 用户复购率分布...
+  → 已保存: /home/cty1576/bigdatacty1/output/html/12_repurchase.html
+[13/13] TOP10 类目内 TOP5 商品(树状图)...
+  → 已保存: /home/cty1576/bigdatacty1/output/html/13_category_treemap.html
+
+[SUCCESS] 综合仪表盘已生成: /home/cty1576/bigdatacty1/output/html/dashboard.html
+  在浏览器中打开即可查看所有图表。
+
+[SUCCESS] 全部可视化完成！
+  单独图表: /home/cty1576/bigdatacty1/output/html/01_*.html ~ 13_*.html
+  综合看板: /home/cty1576/bigdatacty1/output/html/dashboard.html
+
+============================================================
+  [SUCCESS] 可视化生成完成！
+  HTML 文件: /home/cty1576/bigdatacty1/output/html/
+  综合看板: /home/cty1576/bigdatacty1/output/html/dashboard.html
+
+  在浏览器中打开查看:
+    firefox /home/cty1576/bigdatacty1/output/html/dashboard.html
+============================================================
+total 288
+drwxrwxr-x 2 cty1576 cty1576   4096  6月 10 00:04 .
+drwxrwxr-x 5 cty1576 cty1576   4096  6月 10 00:04 ..
+-rw-rw-r-- 1 cty1576 cty1576  10615  6月 10 00:29 01_daily_pv_uv.html
+-rw-rw-r-- 1 cty1576 cty1576  14406  6月 10 00:29 02_hourly_distribution.html
+-rw-rw-r-- 1 cty1576 cty1576   4525  6月 10 00:29 03_behavior_funnel.html
+-rw-rw-r-- 1 cty1576 cty1576   6987  6月 10 00:29 04_top_items.html
+-rw-rw-r-- 1 cty1576 cty1576   6828  6月 10 00:29 05_top_categories.html
+-rw-rw-r-- 1 cty1576 cty1576   6967  6月 10 00:29 06_weekday_weekend.html
+-rw-rw-r-- 1 cty1576 cty1576  11149  6月 10 00:29 07_retention.html
+-rw-rw-r-- 1 cty1576 cty1576   6284  6月 10 00:29 08_rfm.html
+-rw-rw-r-- 1 cty1576 cty1576   7729  6月 10 00:29 09_user_path.html
+-rw-rw-r-- 1 cty1576 cty1576   8431  6月 10 00:29 10_category_conversion.html
+-rw-rw-r-- 1 cty1576 cty1576  25517  6月 10 00:29 11_heatmap_hour_dow.html
+-rw-rw-r-- 1 cty1576 cty1576   7813  6月 10 00:29 12_repurchase.html
+-rw-rw-r-- 1 cty1576 cty1576  14209  6月 10 00:29 13_category_treemap.html
+-rw-rw-r-- 1 cty1576 cty1576 128837  6月 10 00:29 dashboard.html
+-rw-rw-r-- 1 cty1576 cty1576      0  6月 10 00:04 .gitkeep

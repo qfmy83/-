@@ -1,0 +1,19 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Hive Session ID = 6231e453-2ecc-4fc8-aebc-65f6b7c35cf7
+
+Logging initialized using configuration in jar:file:/opt/apache-hive-3.1.3-bin/lib/hive-common-3.1.3.jar!/hive-log4j2.properties Async: true
+Hive Session ID = 2a2de9ad-1e01-477f-ae0c-6f00973748fc
+OK
+2017-11-25	211008	78.76	76.79	75.95
+2017-11-26	47649	65.07	64.49	65.88
+2017-11-27	19230	61.13	62.37	64.76
+2017-11-28	9390	62.11	63.17	66.70
+2017-11-29	5351	69.39	72.06	96.47
+2017-11-30	2871	94.60	95.92	95.26
+2017-12-01	67	92.54	95.52	0.00
+2017-12-02	9	77.78	0.00	0.00
+Time taken: 1.919 seconds, Fetched: 8 row(s)

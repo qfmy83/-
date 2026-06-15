@@ -1,0 +1,8 @@
+[LOG] 本次日志: /home/cty1576/bigdatacty1/logs/pipeline/04_run_kafka_demo_setup_20260610_164253.log
+[INFO] 创建 Kafka Topic: user_behavior
+WARNING: Due to limitations in metric names, topics with a period ('.') or underscore ('_') could collide. To avoid issues it is best to use either, but not both.
+Created topic user_behavior.
+  ✓ Topic 'user_behavior' 已创建
+
+[INFO] 当前所有 Topic:
+user_behavior

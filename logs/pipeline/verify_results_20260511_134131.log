@@ -1,0 +1,315 @@
+[LOG] 本次日志: /home/cty1576/bigdatacty/logs/pipeline/verify_results_20260511_134131.log
+============================================================
+  Hive 数据库验证 + 结果导出
+  保存目录: /home/cty1576/bigdatacty/logs/verification
+============================================================
+
+===== 1/6 系统状态 =====
+
+[01_jps] Java 进程列表（8 个服务齐全证明）
+58690 DataNode
+59107 ResourceManager
+59653 QuorumPeerMain
+85207 Jps
+59240 NodeManager
+  ... 共 9 行（完整在 01_jps.txt）
+
+[02_disk] 磁盘使用
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda3        59G   43G   13G  77% /
+
+[03_memory] 内存使用
+               total        used        free      shared  buff/cache   available
+Mem:           7.7Gi       2.4Gi       2.7Gi        11Mi       2.6Gi       5.0Gi
+Swap:          2.0Gi       1.5Gi       557Mi
+
+===== 2/6 HDFS 存储 =====
+
+[04_hdfs_raw] 原始 CSV 在 HDFS
+Found 1 items
+-rw-r--r--   1 cty1576 supergroup      1.0 G 2026-05-11 12:55 /data/raw/UserBehavior.csv
+
+[05_hdfs_warehouse] Hive 仓库目录树（4 层数仓数据）
+drwxrwxrwx   - cty1576 supergroup          0 2026-05-11 13:09 /user/hive/warehouse/ads.db
+drwxr-xr-x   - cty1576 supergroup          0 2026-05-11 13:04 /user/hive/warehouse/ads.db/behavior_funnel
+-rw-r--r--   1 cty1576 supergroup          0 2026-05-11 13:04 /user/hive/warehouse/ads.db/behavior_funnel/_SUCCESS
+-rw-r--r--   1 cty1576 supergroup       1339 2026-05-11 13:04 /user/hive/warehouse/ads.db/behavior_funnel/part-00000-6344f01d-9d42-4dcf-a03e-2a27d560e4c3-c000.snappy.parquet
+-rw-r--r--   1 cty1576 supergroup       1345 2026-05-11 13:04 /user/hive/warehouse/ads.db/behavior_funnel/part-00001-6344f01d-9d42-4dcf-a03e-2a27d560e4c3-c000.snappy.parquet
+  ... 共 371 行（完整在 05_hdfs_warehouse.txt）
+
+[06_hdfs_summary] HDFS 总体状态报告
+Configured Capacity: 62557859840 (58.26 GB)
+Present Capacity: 15816130560 (14.73 GB)
+DFS Remaining: 13763444736 (12.82 GB)
+DFS Used: 2052685824 (1.91 GB)
+DFS Used%: 12.98%
+  ... 共 30 行（完整在 06_hdfs_summary.txt）
+
+===== 3/6 数据库 / 表结构 =====
+
+[07_databases] 所有数据库（应有 ods/dwd/dws/ads）
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 16 行（完整在 07_databases.txt）
+
+[08_tables_ods] ODS 层表
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 12 行（完整在 08_tables_ods.txt）
+
+[09_tables_dwd] DWD 层表
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 12 行（完整在 09_tables_dwd.txt）
+
+[10_tables_dws] DWS 层表
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 15 行（完整在 10_tables_dws.txt）
+
+[11_tables_ads] ADS 层表（13 张应用表）
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 24 行（完整在 11_tables_ads.txt）
+
+[12_desc_ods] ODS 表结构
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 16 行（完整在 12_desc_ods.txt）
+
+[13_desc_dwd] DWD 表结构（清洗+维度增强）
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 24 行（完整在 13_desc_dwd.txt）
+
+[14_desc_dws] DWS 用户日表结构
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 17 行（完整在 14_desc_dws.txt）
+
+===== 4/6 数据规模 =====
+
+[15_count_ods] ODS 原始数据量（3000 万）
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 34 行（完整在 15_count_ods.txt）
+
+[16_count_dwd] DWD 清洗后数据量
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 35 行（完整在 16_count_dwd.txt）
+
+[17_behavior_dist] 行为类型分布（pv/cart/fav/buy）
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 56 行（完整在 17_behavior_dist.txt）
+
+[18_user_count] 独立活跃用户数（UV）
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 41 行（完整在 18_user_count.txt）
+
+[19_item_count] 商品总数
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 49 行（完整在 19_item_count.txt）
+
+[20_category_count] 类目总数
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 37 行（完整在 20_category_count.txt）
+
+[21_date_range] 数据时间范围
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 35 行（完整在 21_date_range.txt）
+
+===== 5/6 ADS 分析结果 =====
+
+[22_ads_daily] 每日 PV/UV
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 41 行（完整在 22_ads_daily.txt）
+
+[23_ads_hourly] 24 小时活跃分布
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 56 行（完整在 23_ads_hourly.txt）
+
+[24_ads_funnel] 行为转化漏斗
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 15 行（完整在 24_ads_funnel.txt）
+
+[25_ads_top_items] TOP 商品（前 20）
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 31 行（完整在 25_ads_top_items.txt）
+
+[26_ads_top_cats] TOP 类目（前 20）
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 31 行（完整在 26_ads_top_cats.txt）
+
+[27_ads_weekday] 工作日 vs 周末
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 19 行（完整在 27_ads_weekday.txt）
+
+[28_ads_retention] 用户留存
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 19 行（完整在 28_ads_retention.txt）
+
+[29_ads_rfm] RFM 分群
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 40 行（完整在 29_ads_rfm.txt）
+
+[30_ads_user_path] 用户行为路径（前 20）
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 48 行（完整在 30_ads_user_path.txt）
+
+[31_ads_heatmap] 24h×7d 热力数据
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 62 行（完整在 31_ads_heatmap.txt）
+
+[32_ads_repurchase] 复购分布（二八定律）
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 37 行（完整在 32_ads_repurchase.txt）
+
+[33_ads_cat_items] TOP 类目内 TOP 商品
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+  ... 共 62 行（完整在 33_ads_cat_items.txt）
+
+===== 6/6 复制 daemon 日志 =====
+  [OK] 已复制服务日志到 /home/cty1576/bigdatacty/logs/system/
+
+============================================================
+  验证完成！
+============================================================
+verification/ 清单（共 33 个文件）:
+-rw-rw-r-- 1 cty1576 cty1576  150  5月 11 13:41 01_jps.txt
+-rw-rw-r-- 1 cty1576 cty1576   89  5月 11 13:41 02_disk.txt
+-rw-rw-r-- 1 cty1576 cty1576  207  5月 11 13:41 03_memory.txt
+-rw-rw-r-- 1 cty1576 cty1576  103  5月 11 13:41 04_hdfs_raw.txt
+-rw-rw-r-- 1 cty1576 cty1576  68K  5月 11 13:41 05_hdfs_warehouse.txt
+-rw-rw-r-- 1 cty1576 cty1576  942  5月 11 13:41 06_hdfs_summary.txt
+-rw-rw-r-- 1 cty1576 cty1576  815  5月 11 13:41 07_databases.txt
+-rw-rw-r-- 1 cty1576 cty1576  805  5月 11 13:41 08_tables_ods.txt
+-rw-rw-r-- 1 cty1576 cty1576  812  5月 11 13:41 09_tables_dwd.txt
+-rw-rw-r-- 1 cty1576 cty1576  871  5月 11 13:41 10_tables_dws.txt
+-rw-rw-r-- 1 cty1576 cty1576  985  5月 11 13:41 11_tables_ads.txt
+-rw-rw-r-- 1 cty1576 cty1576 1.1K  5月 11 13:42 12_desc_ods.txt
+-rw-rw-r-- 1 cty1576 cty1576 1.5K  5月 11 13:42 13_desc_dwd.txt
+-rw-rw-r-- 1 cty1576 cty1576 1.2K  5月 11 13:42 14_desc_dws.txt
+-rw-rw-r-- 1 cty1576 cty1576 2.1K  5月 11 13:42 15_count_ods.txt
+-rw-rw-r-- 1 cty1576 cty1576 2.2K  5月 11 13:43 16_count_dwd.txt
+-rw-rw-r-- 1 cty1576 cty1576 3.3K  5月 11 13:44 17_behavior_dist.txt
+-rw-rw-r-- 1 cty1576 cty1576 2.7K  5月 11 13:45 18_user_count.txt
+-rw-rw-r-- 1 cty1576 cty1576 3.3K  5月 11 13:47 19_item_count.txt
+-rw-rw-r-- 1 cty1576 cty1576 2.3K  5月 11 13:48 20_category_count.txt
+-rw-rw-r-- 1 cty1576 cty1576 2.2K  5月 11 13:48 21_date_range.txt
+-rw-rw-r-- 1 cty1576 cty1576 2.3K  5月 11 13:48 22_ads_daily.txt
+-rw-rw-r-- 1 cty1576 cty1576 2.7K  5月 11 13:49 23_ads_hourly.txt
+-rw-rw-r-- 1 cty1576 cty1576  916  5月 11 13:49 24_ads_funnel.txt
+-rw-rw-r-- 1 cty1576 cty1576 1.4K  5月 11 13:49 25_ads_top_items.txt
+-rw-rw-r-- 1 cty1576 cty1576 1.4K  5月 11 13:49 26_ads_top_cats.txt
+-rw-rw-r-- 1 cty1576 cty1576 1.1K  5月 11 13:49 27_ads_weekday.txt
+-rw-rw-r-- 1 cty1576 cty1576 1.1K  5月 11 13:49 28_ads_retention.txt
+-rw-rw-r-- 1 cty1576 cty1576 2.3K  5月 11 13:50 29_ads_rfm.txt
+-rw-rw-r-- 1 cty1576 cty1576 2.3K  5月 11 13:50 30_ads_user_path.txt
+-rw-rw-r-- 1 cty1576 cty1576 2.6K  5月 11 13:51 31_ads_heatmap.txt
+-rw-rw-r-- 1 cty1576 cty1576 2.3K  5月 11 13:51 32_ads_repurchase.txt
+-rw-rw-r-- 1 cty1576 cty1576 3.0K  5月 11 13:51 33_ads_cat_items.txt
+
+logs/ 总大小: 3.5M
+
+下载回本地：
+  在 FileZilla 拖整个 logs/ 文件夹到本地写报告用
+============================================================

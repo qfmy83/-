@@ -1,0 +1,62 @@
+[LOG] 本次日志: /home/cty1576/bigdatacty1/logs/pipeline/04_run_kafka_demo_producer_20260610_172731.log
+[INFO] 启动 Kafka Producer...
+============================================================
+Kafka Producer: simulated realtime user behavior stream
+  Broker:        localhost:9092
+  Topic:         user_behavior
+  Data file:     /home/cty1576/bigdatacty1/kafka/../data/UserBehavior.csv
+  Send rate:     1000 msg/s
+  Max messages:  50000
+============================================================
+[INFO] sent 1,000 messages | actual rate: 1812 msg/s
+[INFO] sent 2,000 messages | actual rate: 1764 msg/s
+[INFO] sent 3,000 messages | actual rate: 1251 msg/s
+[INFO] sent 4,000 messages | actual rate: 1227 msg/s
+[INFO] sent 5,000 messages | actual rate: 1165 msg/s
+[INFO] sent 6,000 messages | actual rate: 1086 msg/s
+[INFO] sent 7,000 messages | actual rate: 1084 msg/s
+[INFO] sent 8,000 messages | actual rate: 1085 msg/s
+[INFO] sent 9,000 messages | actual rate: 1099 msg/s
+[INFO] sent 10,000 messages | actual rate: 1065 msg/s
+[INFO] sent 11,000 messages | actual rate: 1065 msg/s
+[INFO] sent 12,000 messages | actual rate: 1054 msg/s
+[INFO] sent 13,000 messages | actual rate: 1065 msg/s
+[INFO] sent 14,000 messages | actual rate: 1057 msg/s
+[INFO] sent 15,000 messages | actual rate: 1048 msg/s
+[INFO] sent 16,000 messages | actual rate: 1054 msg/s
+[INFO] sent 17,000 messages | actual rate: 1046 msg/s
+[INFO] sent 18,000 messages | actual rate: 1035 msg/s
+[INFO] sent 19,000 messages | actual rate: 1035 msg/s
+[INFO] sent 20,000 messages | actual rate: 1043 msg/s
+[INFO] sent 21,000 messages | actual rate: 1041 msg/s
+[INFO] sent 22,000 messages | actual rate: 1037 msg/s
+[INFO] sent 23,000 messages | actual rate: 1028 msg/s
+[INFO] sent 24,000 messages | actual rate: 1028 msg/s
+[INFO] sent 25,000 messages | actual rate: 1032 msg/s
+[INFO] sent 26,000 messages | actual rate: 1025 msg/s
+[INFO] sent 27,000 messages | actual rate: 1030 msg/s
+[INFO] sent 28,000 messages | actual rate: 1014 msg/s
+[INFO] sent 29,000 messages | actual rate: 1029 msg/s
+[INFO] sent 30,000 messages | actual rate: 1022 msg/s
+[INFO] sent 31,000 messages | actual rate: 1026 msg/s
+[INFO] sent 32,000 messages | actual rate: 1027 msg/s
+[INFO] sent 33,000 messages | actual rate: 1027 msg/s
+[INFO] sent 34,000 messages | actual rate: 1026 msg/s
+[INFO] sent 35,000 messages | actual rate: 1019 msg/s
+[INFO] sent 36,000 messages | actual rate: 1024 msg/s
+[INFO] sent 37,000 messages | actual rate: 1018 msg/s
+[INFO] sent 38,000 messages | actual rate: 1021 msg/s
+[INFO] sent 39,000 messages | actual rate: 1014 msg/s
+[INFO] sent 40,000 messages | actual rate: 1020 msg/s
+[INFO] sent 41,000 messages | actual rate: 1020 msg/s
+[INFO] sent 42,000 messages | actual rate: 1019 msg/s
+[INFO] sent 43,000 messages | actual rate: 1020 msg/s
+[INFO] sent 44,000 messages | actual rate: 1017 msg/s
+[INFO] sent 45,000 messages | actual rate: 1016 msg/s
+[INFO] sent 46,000 messages | actual rate: 1016 msg/s
+[INFO] sent 47,000 messages | actual rate: 1017 msg/s
+[INFO] sent 48,000 messages | actual rate: 1012 msg/s
+[INFO] sent 49,000 messages | actual rate: 1011 msg/s
+[INFO] sent 50,000 messages | actual rate: 1014 msg/s
+
+[DONE] sent 50,000 messages in 50.0 seconds

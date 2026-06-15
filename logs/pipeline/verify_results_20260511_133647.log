@@ -1,0 +1,229 @@
+[LOG] 本次日志: /home/cty1576/bigdatacty/logs/pipeline/verify_results_20260511_133647.log
+============================================================
+  Hive 数据库验证 + 结果导出
+  保存目录: /home/cty1576/bigdatacty/logs/verification
+============================================================
+
+===== 1/6 系统状态 =====
+
+[01_jps] Java 进程列表（8 个服务齐全证明）
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/01_jps.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/01_jps.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/01_jps.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[02_disk] 磁盘使用
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/02_disk.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/02_disk.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/02_disk.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[03_memory] 内存使用
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/03_memory.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/03_memory.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/03_memory.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+===== 2/6 HDFS 存储 =====
+
+[04_hdfs_raw] 原始 CSV 在 HDFS
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/04_hdfs_raw.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/04_hdfs_raw.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/04_hdfs_raw.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[05_hdfs_warehouse] Hive 仓库目录树（4 层数仓数据）
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/05_hdfs_warehouse.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/05_hdfs_warehouse.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/05_hdfs_warehouse.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[06_hdfs_summary] HDFS 总体状态报告
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/06_hdfs_summary.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/06_hdfs_summary.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/06_hdfs_summary.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+===== 3/6 数据库 / 表结构 =====
+
+[07_databases] 所有数据库（应有 ods/dwd/dws/ads）
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/07_databases.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/07_databases.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/07_databases.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[08_tables_ods] ODS 层表
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/08_tables_ods.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/08_tables_ods.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/08_tables_ods.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[09_tables_dwd] DWD 层表
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/09_tables_dwd.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/09_tables_dwd.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/09_tables_dwd.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[10_tables_dws] DWS 层表
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/10_tables_dws.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/10_tables_dws.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/10_tables_dws.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[11_tables_ads] ADS 层表（13 张应用表）
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/11_tables_ads.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/11_tables_ads.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/11_tables_ads.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[12_desc_ods] ODS 表结构
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/12_desc_ods.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/12_desc_ods.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/12_desc_ods.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[13_desc_dwd] DWD 表结构（清洗+维度增强）
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/13_desc_dwd.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/13_desc_dwd.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/13_desc_dwd.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[14_desc_dws] DWS 用户日表结构
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/14_desc_dws.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/14_desc_dws.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/14_desc_dws.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+===== 4/6 数据规模 =====
+
+[15_count_ods] ODS 原始数据量（3000 万）
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/15_count_ods.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/15_count_ods.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/15_count_ods.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[16_count_dwd] DWD 清洗后数据量
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/16_count_dwd.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/16_count_dwd.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/16_count_dwd.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[17_behavior_dist] 行为类型分布（pv/cart/fav/buy）
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/17_behavior_dist.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/17_behavior_dist.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/17_behavior_dist.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[18_user_count] 独立活跃用户数（UV）
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/18_user_count.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/18_user_count.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/18_user_count.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[19_item_count] 商品总数
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/19_item_count.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/19_item_count.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/19_item_count.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[20_category_count] 类目总数
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/20_category_count.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/20_category_count.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/20_category_count.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[21_date_range] 数据时间范围
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/21_date_range.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/21_date_range.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/21_date_range.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+===== 5/6 ADS 分析结果 =====
+
+[22_ads_daily] 每日 PV/UV
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/22_ads_daily.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/22_ads_daily.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/22_ads_daily.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[23_ads_hourly] 24 小时活跃分布
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/23_ads_hourly.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/23_ads_hourly.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/23_ads_hourly.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[24_ads_funnel] 行为转化漏斗
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/24_ads_funnel.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/24_ads_funnel.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/24_ads_funnel.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[25_ads_top_items] TOP 商品（前 20）
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/25_ads_top_items.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/25_ads_top_items.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/25_ads_top_items.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[26_ads_top_cats] TOP 类目（前 20）
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/26_ads_top_cats.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/26_ads_top_cats.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/26_ads_top_cats.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[27_ads_weekday] 工作日 vs 周末
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/27_ads_weekday.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/27_ads_weekday.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/27_ads_weekday.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[28_ads_retention] 用户留存
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/28_ads_retention.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/28_ads_retention.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/28_ads_retention.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[29_ads_rfm] RFM 分群
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/29_ads_rfm.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/29_ads_rfm.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/29_ads_rfm.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[30_ads_user_path] 用户行为路径（前 20）
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/30_ads_user_path.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/30_ads_user_path.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/30_ads_user_path.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[31_ads_heatmap] 24h×7d 热力数据
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/31_ads_heatmap.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/31_ads_heatmap.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/31_ads_heatmap.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[32_ads_repurchase] 复购分布（二八定律）
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/32_ads_repurchase.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/32_ads_repurchase.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/32_ads_repurchase.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+[33_ads_cat_items] TOP 类目内 TOP 商品
+verify_results.sh: line 38: /home/cty1576/bigdatacty/logs/verification/33_ads_cat_items.txt: No such file or directory
+head: cannot open '/home/cty1576/bigdatacty/logs/verification/33_ads_cat_items.txt' for reading: No such file or directory
+verify_results.sh: line 40: /home/cty1576/bigdatacty/logs/verification/33_ads_cat_items.txt: No such file or directory
+verify_results.sh: line 41: [: -gt: unary operator expected
+
+===== 6/6 复制 daemon 日志 =====
+  [OK] 已复制服务日志到 /home/cty1576/bigdatacty/logs/system/
+
+============================================================
+  验证完成！
+============================================================
+ls: cannot access '/home/cty1576/bigdatacty/logs/verification': No such file or directory
+verification/ 清单（共 0 个文件）:
+ls: cannot access '/home/cty1576/bigdatacty/logs/verification': No such file or directory
+
+logs/ 总大小: 268K
+
+下载回本地：
+  在 FileZilla 拖整个 logs/ 文件夹到本地写报告用
+============================================================

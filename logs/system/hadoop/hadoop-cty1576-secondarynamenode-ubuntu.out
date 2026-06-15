@@ -1,0 +1,587 @@
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 0
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 31240
+max locked memory           (kbytes, -l) 1010488
+max memory size             (kbytes, -m) unlimited
+open files                          (-n) 1024
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) 8192
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 31240
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -66 namespaceID = 964940025 cTime = 1778472532835 ; clusterId = CID-1bdbb441-bc54-4a08-a0aa-05586e9e8f93 ; blockpoolId = BP-7426217-127.0.1.1-1778472532835.
+Expecting respectively: -66; 234904704; 1778468656826; CID-e3a5ef84-fb96-44bf-b419-002fe301ec3a; BP-1183722628-127.0.1.1-1778468656826.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:516)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:750)

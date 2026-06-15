@@ -1,0 +1,56 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Hive Session ID = a1afbcce-577c-4fd5-ab59-38cb63f3622e
+
+Logging initialized using configuration in jar:file:/opt/apache-hive-3.1.3-bin/lib/hive-common-3.1.3.jar!/hive-log4j2.properties Async: true
+Hive Session ID = 523216e3-1f88-4863-94ce-711805eb0d5b
+Query ID = cty1576_20260511134903_3d81bc43-8d5e-4921-8823-a68f1e1ab247
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1778475288188_0010, Tracking URL = http://ubuntu:8088/proxy/application_1778475288188_0010/
+Kill Command = /usr/local/hadoop/bin/mapred job  -kill job_1778475288188_0010
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2026-05-11 13:49:12,162 Stage-1 map = 0%,  reduce = 0%
+2026-05-11 13:49:17,507 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 2.04 sec
+2026-05-11 13:49:23,747 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.37 sec
+MapReduce Total cumulative CPU time: 3 seconds 370 msec
+Ended Job = job_1778475288188_0010
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 3.37 sec   HDFS Read: 15067 HDFS Write: 1064 SUCCESS
+Total MapReduce CPU Time Spent: 3 seconds 370 msec
+OK
+0	912711	94804	55264	16950
+1	418956	49486	25529	6845
+2	229325	29247	14026	3595
+3	154288	20949	9794	2312
+4	134561	19010	8472	1921
+5	173407	25037	11233	2422
+6	365374	53555	24284	5451
+7	663654	98460	43894	11099
+8	913922	132980	57570	19151
+9	1116761	155838	69387	28956
+10	1295795	172614	80186	38298
+11	1260667	175513	78479	36308
+12	1274145	177609	77026	35385
+13	1397732	180421	84438	36959
+14	1393327	177736	83905	36560
+15	1446247	180839	86514	36670
+16	1382770	178894	83498	35006
+17	1254991	174778	77163	30344
+18	1294093	174242	76566	28439
+19	1630739	186738	95393	34267
+20	1973082	198505	118266	40010
+21	2256834	204588	140412	43284
+22	2223351	194264	146271	40973
+23	1678368	153323	119310	29646
+Time taken: 21.585 seconds, Fetched: 24 row(s)

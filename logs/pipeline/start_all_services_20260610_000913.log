@@ -1,0 +1,43 @@
+[LOG] 本次日志: /home/cty1576/bigdatacty1/logs/pipeline/start_all_services_20260610_000913.log
+============================================================
+  启动所有大数据服务
+============================================================
+
+[1/4] 启动 Hadoop...
+Starting namenodes on [localhost]
+Starting datanodes
+Starting secondary namenodes [ubuntu]
+Starting resourcemanager
+Starting nodemanagers
+  等待 NameNode 就绪... ✓
+  ✓ Hadoop 已启动
+
+[2/4] 启动 Zookeeper + Kafka...
+  等待 Kafka Broker 就绪.... OK
+  ✓ Zookeeper + Kafka 已启动
+
+[3/4] 启动 Hive Metastore...
+  等待 Metastore 就绪......... ✓
+  ✓ Hive Metastore 已启动
+
+[4/4] Spark 使用 local 模式，无需额外启动。
+
+============================================================
+  当前 Java 进程 (jps):
+============================================================
+33505 RunJar
+31650 DataNode
+32086 ResourceManager
+32231 NodeManager
+33703 Jps
+31867 SecondaryNameNode
+33068 Kafka
+31518 NameNode
+32655 QuorumPeerMain
+
+============================================================
+  Web UI 地址:
+  HDFS:  http://localhost:9870
+  YARN:  http://localhost:8088
+  Spark: http://localhost:4040 (提交任务后可用)
+============================================================

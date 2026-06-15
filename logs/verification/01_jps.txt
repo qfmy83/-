@@ -1,0 +1,9 @@
+58690 DataNode
+59107 ResourceManager
+59653 QuorumPeerMain
+85207 Jps
+59240 NodeManager
+58921 SecondaryNameNode
+58556 NameNode
+60543 RunJar
+60079 Kafka

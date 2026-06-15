@@ -1,0 +1,24 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-3.1.3-bin/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Hive Session ID = caa1c38d-a524-47bd-ad8c-23caf6e31ad5
+
+Logging initialized using configuration in jar:file:/opt/apache-hive-3.1.3-bin/lib/hive-common-3.1.3.jar!/hive-log4j2.properties Async: true
+Hive Session ID = ada8baef-9292-4a6d-8053-48d9efe63551
+OK
+user_id             	bigint              	                    
+item_id             	bigint              	                    
+category_id         	bigint              	                    
+behavior            	string              	                    
+event_time          	string              	                    
+event_hour          	int                 	                    
+day_of_week         	int                 	                    
+is_weekend          	int                 	                    
+event_date          	string              	                    
+	 	 
+# Partition Information	 	 
+# col_name            	data_type           	comment             
+event_date          	string              	                    
+Time taken: 0.683 seconds, Fetched: 13 row(s)
