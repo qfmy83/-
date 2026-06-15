@@ -1,0 +1,9 @@
+day_type,behavior,total_count,user_count,avg_per_user
+weekday,buy,325808,143631,2.27
+weekday,cart,849084,176847,4.80
+weekday,fav,448106,88728,5.05
+weekday,pv,13825156,290273,47.63
+weekend,buy,275043,134035,2.05
+weekend,cart,817796,183964,4.45
+weekend,fav,422745,90089,4.69
+weekend,pv,13019944,293802,44.32

@@ -1,0 +1,17 @@
+from_behavior,to_behavior,path_count,path_ratio
+buy,pv,432549,74.00
+buy,buy,106921,18.29
+buy,cart,31217,5.34
+buy,fav,13812,2.36
+cart,pv,1303512,79.27
+cart,cart,292360,17.78
+cart,buy,26231,1.60
+cart,fav,22359,1.36
+fav,pv,659779,76.47
+fav,fav,172352,19.98
+fav,cart,21167,2.45
+fav,buy,9467,1.10
+pv,pv,24191950,90.96
+pv,cart,1303702,4.90
+pv,fav,653262,2.46
+pv,buy,447467,1.68

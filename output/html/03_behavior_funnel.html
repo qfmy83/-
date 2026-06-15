@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v6/echarts.min.js"></script>
+
+    
+</head>
+<body >
+    <div id="880256b913a742be93ce983000265a4c" class="chart-container" style="width:1000px; height:500px; "></div>
+    <script>
+        var chart_880256b913a742be93ce983000265a4c = echarts.init(
+            document.getElementById('880256b913a742be93ce983000265a4c'), 'light', {renderer: 'canvas', locale: 'ZH'});
+        var option_880256b913a742be93ce983000265a4c = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "series": [
+        {
+            "type": "funnel",
+            "name": "\u7528\u6237\u6570",
+            "data": [
+                {
+                    "name": "\u6d4f\u89c8(pv)",
+                    "value": 294355
+                },
+                {
+                    "name": "\u6536\u85cf(fav)",
+                    "value": 117106
+                },
+                {
+                    "name": "\u52a0\u8d2d(cart)",
+                    "value": 221462
+                },
+                {
+                    "name": "\u8d2d\u4e70(buy)",
+                    "value": 200853
+                }
+            ],
+            "min": 0,
+            "max": 100,
+            "minSize": "0%",
+            "maxSize": "100%",
+            "orient": "vertical",
+            "sort": "descending",
+            "gap": 2,
+            "legendHoverLink": true,
+            "funnelAlign": "center",
+            "label": {
+                "show": true,
+                "position": "inside",
+                "margin": 8,
+                "formatter": "{b}: {c}",
+                "richInheritPlainLabel": true,
+                "valueAnimation": false
+            },
+            "itemStyle": {
+                "borderColor": "#fff",
+                "borderWidth": 1
+            },
+            "selectedMode": false,
+            "zlevel": 0,
+            "z": 2
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u6d4f\u89c8(pv)",
+                "\u8d2d\u4e70(buy)",
+                "\u52a0\u8d2d(cart)",
+                "\u6536\u85cf(fav)"
+            ],
+            "selected": {},
+            "show": true,
+            "top": "5%",
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10,
+            "triggerEvent": false
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "displayTransition": true,
+        "formatter": "{b}: {c} \u7528\u6237",
+        "textStyle": {
+            "fontSize": 14,
+            "richInheritPlainLabel": true
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "\u7528\u6237\u884c\u4e3a\u8f6c\u5316\u6f0f\u6597",
+            "target": "blank",
+            "subtext": "\u4ece\u6d4f\u89c8\u5230\u8d2d\u4e70\u7684\u8f6c\u5316\u8def\u5f84",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ]
+};
+        chart_880256b913a742be93ce983000265a4c.setOption(option_880256b913a742be93ce983000265a4c);
+    </script>
+</body>
+</html>
